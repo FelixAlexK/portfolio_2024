@@ -4,19 +4,45 @@ import MyPassionComponent from "./components/MyPassionComponent.vue";
 import AboutComponent from "./components/AboutComponent.vue";
 import ContactComponent from "./components/ContactComponent.vue";
 import { Instagram, Linkedin } from 'lucide-vue-next'
-import { ref } from "vue";
+import { ref, useTemplateRef, type Ref } from "vue";
 import RepoScroller from "./components/RepoScroller.vue";
 import TooltipComponent from "./components/TooltipComponent.vue";
+import { useIntersectionObserver, type MaybeElement } from "@vueuse/core";
 
-const homeTarget = ref();
-const aboutTarget = ref();
-const contactTarget = ref();
+function setupIntersectionObserver(
+  target: Ref<MaybeElement, MaybeElement>,
+  visibilityFlag: Ref<boolean, boolean>,
+) {
+
+
+  useIntersectionObserver(
+    target,
+    ([entry]) => {
+      visibilityFlag.value = entry?.isIntersecting || false;
+    },
+    { threshold: 0.5 },
+  );
+}
+
+const homeTargetIsVisible = ref(false);
+const aboutTargetIsVisible = ref(false);
+const contactTargetIsVisible = ref(false);
+
+const homeTarget = useTemplateRef<MaybeElement>('homeTarget');
+const aboutTarget = useTemplateRef<MaybeElement>('aboutTarget');
+const contactTarget = useTemplateRef<MaybeElement>('contactTarget');
+
+setupIntersectionObserver(homeTarget, homeTargetIsVisible);
+setupIntersectionObserver(aboutTarget, aboutTargetIsVisible);
+setupIntersectionObserver(contactTarget, contactTargetIsVisible);
+
 </script>
 
 <template>
   <div class="flex min-h-screen flex-col">
     <header class="fixed top-0 w-full">
-      <NavComponent :home-target="homeTarget" :about-target="aboutTarget" :contact-target="contactTarget">
+      <NavComponent :home-target="homeTargetIsVisible" :about-target="aboutTargetIsVisible"
+        :contact-target="contactTargetIsVisible">
       </NavComponent>
     </header>
     <main>
