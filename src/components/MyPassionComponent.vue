@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import RepoScroller from './RepoScroller.vue';
-
-
-
-
 
 </script>
 
