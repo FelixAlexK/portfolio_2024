@@ -2,7 +2,7 @@
 
 <template>
   <section class="mb-32 mt-32" ref="aboutTarget">
-    <div class="flex w-full flex-col md:flex-row gap-24">
+    <div class="flex w-full flex-col md:flex-row md:gap-24 gap-12">
       <div class="flex md:w-1/3 flex-col w-full">
         <h2 class="mb-8  font-lato md:text-6xl text-4xl  font-semibold">
           Hi, ich bin Felix
@@ -13,8 +13,8 @@
           <a href="#contact" class="rounded-2xl bg-gray-950 px-16 py-4 text-lg font-medium text-white">Kontakt</a>
         </div>
       </div>
-      <div class="md:w-2/3 flex flex-col gap-16 md:mt-8">
-        <span class="font-rubik text-2xl leading-8">Ich bin ein vielseitig interessierter Student mit einer
+      <div class="md:w-2/3 w-full flex flex-col md:gap-16 gap-8 md:mt-8">
+        <span class="font-rubik md:text-2xl text-xl  leading-8">Ich bin ein vielseitig interessierter Student mit einer
           großen
           Begeisterung für Technik, Sport und Musik. Schon früh hat mich die Faszination für Technologie gepackt – ich
           liebe es, innovative Lösungen zu entwickeln und neue Projekte anzupacken. Mein Angewandte
