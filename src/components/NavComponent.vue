@@ -19,7 +19,7 @@ const { y } = useWindowScroll();
     <h1 class="cursor-pointer px-6 font-lato text-4xl font-bold ">
       <a href="#">FELIX</a>
     </h1>
-    <small class="font-rubik text-gray-100">2025</small>
+
     <nav>
       <ul class="flex items-center gap-12 font-rubik text-lg font-semibold">
         <li>
