@@ -90,7 +90,7 @@ function sendEmail() {
 
 <template>
   <section class="mb-32 mt-32" ref="contactTarget">
-    <div class="w-full rounded-xl bg-gray-100 md:p-16 p-8">
+    <div class="w-full rounded-xl bg-gray-100 md:p-16 p-4">
       <h2 class="mb-1 font-lato md:text-6xl text-4xl font-bold ">Kontaktiere mich</h2>
       <p class="mb-8 font-rubik md:text-lg text-base">
         Sende mir eine Nachricht und ich melde mich bei dir.
@@ -124,11 +124,11 @@ function sendEmail() {
 
         <span class="font-rubik md:text-2xl text-xl font-bold">felixk@iamfelixk.de
         </span>
-        <button class="relative rounded px-2 py-1 hover:text-blue-500" @click="copyToClipboard">
+        <button class="relative hidden md:block rounded px-2 py-1 hover:text-blue-500" @click="copyToClipboard">
           <Copy></Copy>
         </button>
         <div v-if="copied"
-          class="relative  z-10 rounded bg-green-500 px-4 py-2 font-rubik md:text-sm text-xs text-white shadow-lg transition-transform duration-300">
+          class="relative   z-10 rounded bg-green-500 px-4 py-2 font-rubik md:text-sm text-xs text-white shadow-lg transition-transform duration-300">
           <span>kopiert</span>
         </div>
 
