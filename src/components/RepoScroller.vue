@@ -34,7 +34,7 @@ function scrollLeftOrRight(direction: "left" | "right") {
 </script>
 
 <template>
-  <div class="flex h-96 w-full flex-col items-center rounded-3xl bg-gray-100 p-8">
+  <div class="md:flex h-96 w-full flex-col items-center rounded-3xl bg-gray-100 p-8 hidden">
     <span class="mb-1 flex w-full justify-start font-rubik text-sm text-blue-500">Öffentliche Repositories</span>
     <div class="flex h-full w-full flex-col items-center justify-center">
       <div class="flex w-full flex-row items-center justify-between">

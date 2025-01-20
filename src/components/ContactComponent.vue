@@ -90,25 +90,25 @@ function sendEmail() {
 
 <template>
   <section class="mb-32 mt-32" ref="contactTarget">
-    <div class="w-full rounded-xl bg-gray-100 p-16">
-      <h2 class="mb-1 font-lato text-6xl font-bold">Kontaktiere mich</h2>
-      <p class="mb-8 font-rubik text-lg">
+    <div class="w-full rounded-xl bg-gray-100 md:p-16 p-8">
+      <h2 class="mb-1 font-lato md:text-6xl text-4xl font-bold ">Kontaktiere mich</h2>
+      <p class="mb-8 font-rubik md:text-lg text-base">
         Sende mir eine Nachricht und ich melde mich bei dir.
       </p>
       <form ref="form" @submit.prevent="sendEmail" class="flex flex-col">
 
 
         <input required name="from_name" type="text" placeholder="Name*"
-          class="mb-4 h-16 w-full rounded-3xl px-6 font-rubik text-lg focus-visible:shadow-xl focus-visible:outline-none" />
+          class="mb-4 h-16 w-full rounded-3xl px-6 font-rubik md:text-lg text-base focus-visible:shadow-xl focus-visible:outline-none" />
         <input required name="from_email" type="email" placeholder="Email*"
-          class="mb-4 h-16 w-full rounded-3xl px-6 font-rubik text-lg focus-visible:shadow-xl focus-visible:outline-none" />
+          class="mb-4 h-16 w-full rounded-3xl px-6 font-rubik md:text-lg text-base focus-visible:shadow-xl focus-visible:outline-none" />
         <textarea required name="message" type="text" placeholder="Anfrage*"
-          class="mb-16 h-32 w-full rounded-3xl p-6 font-rubik text-lg focus-visible:shadow-xl focus-visible:outline-none"></textarea>
+          class="mb-16 h-32 w-full rounded-3xl p-6 font-rubik md:text-lg text-base focus-visible:shadow-xl focus-visible:outline-none"></textarea>
 
         <div class="flex flex-col justify-start items-start mb-16">
 
           <button type="submit"
-            class=" mb-1 rounded-2xl bg-gray-950 px-16 py-4 font-rubik text-lg font-medium text-white ">
+            class=" mb-1 rounded-2xl bg-gray-950 px-16 py-4 font-rubik md:text-lg text-base font-medium text-white ">
             <Loader2 class="animate-spin" v-if="isLoading"></Loader2>
             <span v-else>Senden</span>
           </button>
@@ -120,16 +120,19 @@ function sendEmail() {
       </form>
 
 
-      <div class="absolute flex flex-row items-center gap-4">
-        <span class="font-rubik text-3xl font-bold">felixk@iamfelixk.de
+      <div class=" flex flex-row  items-center md:gap-4">
+
+        <span class="font-rubik md:text-2xl text-xl font-bold">felixk@iamfelixk.de
         </span>
-        <button class="relative rounded px-4 py-2 hover:text-blue-500" @click="copyToClipboard">
+        <button class="relative rounded px-2 py-1 hover:text-blue-500" @click="copyToClipboard">
           <Copy></Copy>
         </button>
         <div v-if="copied"
-          class="relative left-2 z-10 rounded bg-green-500 px-4 py-2 font-rubik text-sm text-white shadow-lg transition-transform duration-300">
+          class="relative  z-10 rounded bg-green-500 px-4 py-2 font-rubik md:text-sm text-xs text-white shadow-lg transition-transform duration-300">
           <span>kopiert</span>
         </div>
+
+
       </div>
     </div>
   </section>

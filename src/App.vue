@@ -43,7 +43,7 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
       </NavComponent>
     </header>
     <main>
-      <div class="container mx-auto mt-36 h-full">
+      <div class="md:container md:mx-auto md:mt-36 h-full p-8">
         <MyPassionComponent ref="homeTarget"></MyPassionComponent>
         <RepoScroller></RepoScroller>
         <div class="invisible relative -top-32 block" id="about"></div>
@@ -55,8 +55,9 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
 
     <footer class="border-t-2 border-blue-500 bg-gray-950 p-16 text-white">
 
-      <div class="flex items-center justify-between font-rubik">
+      <div class="flex max-md:flex-col md:items-center md:justify-between font-rubik">
         <p class="font-lato text-4xl font-bold">FELIX</p>
+        <small class="font-rubik text-gray-100 max-md:mb-8 md:hidden">2025</small>
         <div class="flex gap-16">
           <TooltipComponent>
             <template #trigger>
@@ -85,7 +86,7 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
           </TooltipComponent>
         </div>
       </div>
-      <small class="font-rubik text-gray-100">2025</small>
+      <small class="font-rubik text-gray-100 hidden md:block">2025</small>
     </footer>
   </div>
 </template>
