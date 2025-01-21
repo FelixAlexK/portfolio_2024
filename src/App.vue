@@ -38,30 +38,51 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
 <template>
   <div class="flex min-h-screen flex-col">
     <header class="fixed top-0 w-full">
-      <NavComponent :home-target="homeTargetIsVisible" :about-target="aboutTargetIsVisible"
-        :contact-target="contactTargetIsVisible">
+      <NavComponent
+        :home-target="homeTargetIsVisible"
+        :about-target="aboutTargetIsVisible"
+        :contact-target="contactTargetIsVisible"
+      >
       </NavComponent>
     </header>
     <main>
-      <div class="md:container md:mx-auto md:mt-36 h-full p-8">
-        <MyPassionComponent ref="homeTarget"></MyPassionComponent>
-        <RepoScroller></RepoScroller>
+      <div class="h-full p-8 md:container md:mx-auto">
+        <MyPassionComponent
+          class="my-32 md:my-64"
+          ref="homeTarget"
+        ></MyPassionComponent>
+        <RepoScroller class="mb-32 md:mb-64"></RepoScroller>
         <div class="invisible relative -top-32 block" id="about"></div>
-        <AboutComponent ref="aboutTarget"></AboutComponent>
+        <AboutComponent
+          class="mb-32 md:mb-64"
+          ref="aboutTarget"
+        ></AboutComponent>
         <div class="invisible relative -top-32 block" id="contact"></div>
-        <ContactComponent ref="contactTarget"></ContactComponent>
+        <ContactComponent
+          class="mb-32 md:mb-64"
+          ref="contactTarget"
+        ></ContactComponent>
       </div>
     </main>
 
-    <footer class="border-t-2 border-blue-500 bg-gray-950 p-16 text-white">
-
-      <div class="flex max-md:flex-col md:items-center md:justify-between font-rubik">
+    <footer
+      class="border-t-2 border-blue-500 bg-gray-950 p-8 text-white md:p-16"
+    >
+      <div
+        class="flex font-rubik max-md:flex-col md:items-center md:justify-between"
+      >
         <p class="font-lato text-4xl font-bold">FELIX</p>
-        <small class="font-rubik text-gray-100 max-md:mb-8 md:hidden">2025</small>
+        <small class="font-rubik text-gray-100 max-md:mb-8 md:hidden"
+          >2025</small
+        >
         <div class="flex gap-16">
           <TooltipComponent>
             <template #trigger>
-              <a class="transition-colors duration-300 hover:text-blue-500" href="">
+              <a
+                class="transition-colors duration-300 hover:text-blue-500"
+                href="https://www.instagram.com/felix.k.02"
+                target="_blank"
+              >
                 <Instagram />
               </a>
             </template>
@@ -70,7 +91,10 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
 
           <TooltipComponent>
             <template #trigger>
-              <a class="transition-colors duration-300 hover:text-blue-500" href="">
+              <a
+                class="transition-colors duration-300 hover:text-blue-500"
+                href=""
+              >
                 <Linkedin />
               </a>
             </template>
@@ -78,7 +102,11 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
           </TooltipComponent>
           <TooltipComponent>
             <template #trigger>
-              <a class="transition-colors duration-300 hover:text-blue-500" href="">
+              <a
+                class="transition-colors duration-300 hover:text-blue-500"
+                href="https://github.com/FelixAlexK"
+                target="_blank"
+              >
                 <Github />
               </a>
             </template>
@@ -86,7 +114,7 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
           </TooltipComponent>
         </div>
       </div>
-      <small class="font-rubik text-gray-100 hidden md:block">2025</small>
+      <small class="hidden font-rubik text-gray-100 md:block">2025</small>
     </footer>
   </div>
 </template>
