@@ -7,8 +7,19 @@
         <h2 class="mb-8 font-lato text-4xl font-semibold md:text-6xl">
           Hi, ich bin Felix
         </h2>
-        <img src="../assets/IMG_1877.JPEG" alt=""
-          class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" />
+        <picture>
+          <!-- Modern format (WebP) -->
+          <source srcset="../assets/IMG_1877.webp" type="image/webp" alt="Picture of Felix"
+            class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" loading="lazy">
+
+          <!-- Fallback format (JPEG/PNG) -->
+          <source srcset="../assets/IMG_1877.JPEG" type="image/jpeg"
+            class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" loading="lazy">
+
+          <!-- Default fallback for unsupported browsers -->
+          <img src="../assets/IMG_1877.JPEG" alt="Picture of Felix"
+            class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" loading="lazy">
+        </picture>
         <div class="hidden md:block">
           <a href="#contact" class="rounded-2xl bg-gray-950 px-16 py-4 text-lg font-medium text-white">Kontakt</a>
         </div>
