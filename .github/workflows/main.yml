@@ -31,7 +31,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: dist
-        server-dir: /path/to/your/public_html
+        server-dir: /home/u431686214/domains/iamfelixk.de/public_html
 
     - name: Post-deployment verification (optional)
       run: echo "Deployment complete!"
