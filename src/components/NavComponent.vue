@@ -39,7 +39,7 @@ onUnmounted(() => {
 
 <template>
   <div :class="{
-    'bg-transparent text-gray-950': y <= 0,
+    'bg-white text-gray-950': y <= 0,
     'bg-gray-950 text-white': y > 5,
   }"
     class="flex h-24 w-full items-center justify-between border-b-2 border-blue-800 px-12 transition-colors duration-300 md:px-24">
