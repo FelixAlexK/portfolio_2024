@@ -47,8 +47,8 @@ onUnmounted(() => {
       <a href="#">FELIX</a>
     </h1> -->
     <a href="#">
-      <img v-if="y <= 0" class="aspect-auto h-auto w-28" src="../assets/logo.png" alt="logo">
-      <img v-else-if="y > 5" class="aspect-auto h-auto w-28" src="../assets/logo_light.png" alt="logo">
+      <img v-if="y <= 0" class="aspect-auto h-auto w-28" src="../assets/logo.png" alt="logo" />
+      <img v-else-if="y > 5" class="aspect-auto h-auto w-28" src="../assets/logo_light.png" alt="logo" />
     </a>
 
     <nav class="hidden md:flex">
