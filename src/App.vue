@@ -53,15 +53,15 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
       </div>
     </main>
 
-    <footer class="border-t-2 border-blue-500 bg-gray-950 p-8 text-white  md:p-16">
+    <footer class="border-t-2 border-blue-800 bg-gray-950 p-8 text-white  md:p-16">
       <div class="flex font-rubik max-md:flex-col md:items-center md:justify-between">
         <img class="aspect-auto h-auto w-28 max-md:mb-8" src="./assets/logo_light.png" alt="logo" />
 
         <div class="flex gap-16">
           <TooltipComponent>
             <template #trigger>
-              <a class="transition-colors duration-300 hover:text-blue-500" href="https://www.instagram.com/felix.k.02"
-                target="_blank">
+              <a aria-label="Link to Instagram" class="transition-colors duration-300 hover:text-blue-800"
+                href="https://www.instagram.com/felix.k.02" target="_blank">
                 <Instagram />
               </a>
             </template>
@@ -70,7 +70,7 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
 
           <TooltipComponent>
             <template #trigger>
-              <a class="transition-colors duration-300 hover:text-blue-500" href="">
+              <a aria-label="Link to Linkedin" class="transition-colors duration-300 hover:text-blue-800" href="">
                 <Linkedin />
               </a>
             </template>
@@ -78,8 +78,8 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
           </TooltipComponent>
           <TooltipComponent>
             <template #trigger>
-              <a class="transition-colors duration-300 hover:text-blue-500" href="https://github.com/FelixAlexK"
-                target="_blank">
+              <a aria-label="Link to Github" class="transition-colors duration-300 hover:text-blue-800"
+                href="https://github.com/FelixAlexK" target="_blank">
                 <Github />
               </a>
             </template>

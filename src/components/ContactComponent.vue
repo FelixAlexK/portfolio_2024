@@ -118,7 +118,8 @@ function sendEmail() {
       <div class="flex flex-row items-center md:gap-4">
         <span class="font-rubik text-xl font-bold md:text-2xl">felixk@iamfelixk.de
         </span>
-        <button class="relative hidden rounded px-2 py-1 hover:text-blue-500 md:block" @click="copyToClipboard">
+        <button aria-label="copy email" class="relative hidden rounded px-2 py-1 hover:text-blue-800 md:block"
+          @click="copyToClipboard">
           <Copy></Copy>
         </button>
         <div v-if="copied"
