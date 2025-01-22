@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Copy, Loader2, Check } from "lucide-vue-next";
+import { Copy, Loader2 } from "lucide-vue-next";
 import { ref, useTemplateRef } from "vue";
 import emailjs from "@emailjs/browser";
 
@@ -45,7 +45,6 @@ const form = ref<FormData>({
 });
 
 const successMessage = ref<string | null>(null);
-const errorMessage = ref("");
 
 function sendEmail() {
   isLoading.value = true;
@@ -98,58 +97,32 @@ function sendEmail() {
         Sende mir eine Nachricht und ich melde mich bei dir.
       </p>
       <form ref="form" @submit.prevent="sendEmail" class="flex flex-col">
-        <input
-          required
-          name="from_name"
-          type="text"
-          placeholder="Name*"
-          class="mb-4 h-16 w-full rounded-3xl px-6 font-rubik text-base focus-visible:shadow-xl focus-visible:outline-none md:text-lg"
-        />
-        <input
-          required
-          name="from_email"
-          type="email"
-          placeholder="Email*"
-          class="mb-4 h-16 w-full rounded-3xl px-6 font-rubik text-base focus-visible:shadow-xl focus-visible:outline-none md:text-lg"
-        />
-        <textarea
-          required
-          name="message"
-          type="text"
-          placeholder="Anfrage*"
-          class="mb-16 h-32 w-full rounded-3xl p-6 font-rubik text-base focus-visible:shadow-xl focus-visible:outline-none md:text-lg"
-        ></textarea>
+        <input required name="from_name" type="text" placeholder="Name*"
+          class="mb-4 h-16 w-full rounded-3xl px-6 font-rubik text-base focus-visible:shadow-xl focus-visible:outline-none md:text-lg" />
+        <input required name="from_email" type="email" placeholder="Email*"
+          class="mb-4 h-16 w-full rounded-3xl px-6 font-rubik text-base focus-visible:shadow-xl focus-visible:outline-none md:text-lg" />
+        <textarea required name="message" type="text" placeholder="Anfrage*"
+          class="mb-16 h-32 w-full rounded-3xl p-6 font-rubik text-base focus-visible:shadow-xl focus-visible:outline-none md:text-lg"></textarea>
 
         <div class="mb-16 flex flex-col items-start justify-start">
-          <button
-            type="submit"
-            class="mb-1 rounded-2xl bg-gray-950 px-16 py-4 font-rubik text-base font-medium text-white md:text-lg"
-          >
+          <button type="submit"
+            class="mb-1 rounded-2xl bg-gray-950 px-16 py-4 font-rubik text-base font-medium text-white md:text-lg">
             <Loader2 class="animate-spin" v-if="isLoading"></Loader2>
             <span v-else>Senden</span>
           </button>
-          <small
-            v-if="successMessage"
-            class="animate-pulse font-rubik text-green-600"
-            >{{ successMessage }}
+          <small v-if="successMessage" class="animate-pulse font-rubik text-green-600">{{ successMessage }}
           </small>
         </div>
       </form>
 
       <div class="flex flex-row items-center md:gap-4">
-        <span class="font-rubik text-xl font-bold md:text-2xl"
-          >felixk@iamfelixk.de
+        <span class="font-rubik text-xl font-bold md:text-2xl">felixk@iamfelixk.de
         </span>
-        <button
-          class="relative hidden rounded px-2 py-1 hover:text-blue-500 md:block"
-          @click="copyToClipboard"
-        >
+        <button class="relative hidden rounded px-2 py-1 hover:text-blue-500 md:block" @click="copyToClipboard">
           <Copy></Copy>
         </button>
-        <div
-          v-if="copied"
-          class="relative z-10 rounded bg-green-500 px-4 py-2 font-rubik text-xs text-white shadow-lg transition-transform duration-300 md:text-sm"
-        >
+        <div v-if="copied"
+          class="relative z-10 rounded bg-green-500 px-4 py-2 font-rubik text-xs text-white shadow-lg transition-transform duration-300 md:text-sm">
           <span>kopiert</span>
         </div>
       </div>
