@@ -43,9 +43,6 @@ onUnmounted(() => {
     'bg-gray-950 text-white': y > 5,
   }"
     class="flex h-24 w-full items-center justify-between border-b-2 border-blue-500 px-12 transition-colors duration-300 md:px-24">
-    <!-- <h1 class="cursor-pointer px-6 font-lato text-4xl font-bold">
-      <a href="#">FELIX</a>
-    </h1> -->
     <a href="#">
       <img v-if="y <= 0" class="aspect-auto h-auto w-28" src="../assets/logo.png" alt="logo" />
       <img v-else-if="y > 5" class="aspect-auto h-auto w-28" src="../assets/logo_light.png" alt="logo" />
