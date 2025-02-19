@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="" ref="aboutTarget">
+  <section class="">
     <div class="flex w-full flex-col gap-12 md:flex-row md:gap-24">
       <div class="flex w-full flex-col md:w-1/3">
         <h2 class="mb-8 font-lato text-4xl font-semibold md:text-6xl">
@@ -9,16 +9,22 @@
         </h2>
         <picture>
           <!-- Modern format (WebP) -->
-          <source srcset="../assets/IMG_1877.webp" type="image/webp" alt="Picture of Felix"
-            class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" loading="lazy">
+          <source
+            srcset="../assets/IMG_1877.webp" type="image/webp" alt="Picture of Felix"
+            class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" loading="lazy"
+          >
 
           <!-- Fallback format (JPEG/PNG) -->
-          <source srcset="../assets/IMG_1877.JPEG" type="image/jpeg"
-            class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" loading="lazy">
+          <source
+            srcset="../assets/IMG_1877.JPEG" type="image/jpeg"
+            class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" loading="lazy"
+          >
 
           <!-- Default fallback for unsupported browsers -->
-          <img src="../assets/IMG_1877.JPEG" alt="Picture of Felix"
-            class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" loading="lazy">
+          <img
+            src="../assets/IMG_1877.JPEG" alt="Picture of Felix"
+            class="aspect-square w-80 rounded-3xl object-cover object-center md:mb-16" loading="lazy"
+          >
         </picture>
         <div class="hidden md:block">
           <a href="#contact" class="rounded-2xl bg-gray-950 px-16 py-4 text-lg font-medium text-white">Kontakt</a>

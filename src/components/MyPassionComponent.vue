@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="h-1/3" ref="homeTarget">
+  <section class="h-1/3">
     <div class="w-full">
       <div class="flex h-full flex-col-reverse gap-24 md:flex-row">
         <div class="flex flex-col md:w-1/2">
