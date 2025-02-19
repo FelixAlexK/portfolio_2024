@@ -37,13 +37,13 @@ function copyToClipboard() {
         Kontaktiere mich
       </h2>
       <p class="mb-16 font-rubik text-base md:text-lg">
-        Sende mir eine Nachricht und ich melde mich bei dir.
+        Schreiben Sie mir eine E-Mail oder schauen Sie auf meinen Social-Media-Kanälen vorbei.
       </p>
       <div class="mb-8 flex flex-row items-center md:gap-4">
-        <span class="font-rubik text-xl font-bold md:text-2xl">felixk@iamfelixk.de
-        </span>
+        <span class="font-rubik text-xl font-bold md:text-2xl">felixk@iamfelixk.de </span>
         <button
-          aria-label="copy email" class="relative hidden rounded px-2 py-1 hover:text-blue-800 md:block"
+          aria-label="copy email"
+          class="relative hidden rounded px-2 py-1 hover:text-blue-800 md:block"
           @click="copyToClipboard"
         >
           <Copy />
@@ -59,8 +59,10 @@ function copyToClipboard() {
         <TooltipComponent>
           <template #trigger>
             <a
-              aria-label="Link to Instagram" class="transition-colors duration-300 hover:text-blue-800"
-              href="https://www.instagram.com/felix.k.02" target="_blank"
+              aria-label="Link to Instagram"
+              class="transition-colors duration-300 hover:text-blue-800"
+              href="https://www.instagram.com/felix.k.02"
+              target="_blank"
             >
               <Instagram />
             </a>
@@ -79,8 +81,10 @@ function copyToClipboard() {
         <TooltipComponent>
           <template #trigger>
             <a
-              aria-label="Link to Github" class="transition-colors duration-300 hover:text-blue-800"
-              href="https://github.com/FelixAlexK" target="_blank"
+              aria-label="Link to Github"
+              class="transition-colors duration-300 hover:text-blue-800"
+              href="https://github.com/FelixAlexK"
+              target="_blank"
             >
               <Github />
             </a>

@@ -1,10 +1,10 @@
-import process from 'node:process'
+import process from "node:process";
 
 export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {
-      ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}),
+      ...(process.env.NODE_ENV === "production" ? { cssnano: {} } : {}),
     },
   },
-}
+};
