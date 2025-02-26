@@ -4,10 +4,13 @@ import { ChevronLeft, ChevronRight } from "lucide-vue-next";
 import { ref } from "vue";
 import { getUserPublicRepos } from "../services/api";
 
+
 const currentScrollIndex = ref(0);
+;
+
 
 const { state, isReady, isLoading } = useAsyncState(
-  getUserPublicRepos("FelixAlexK", "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").then((data) => data),
+  getUserPublicRepos("FelixAlexK").then((data) => data),
   [],
 );
 
