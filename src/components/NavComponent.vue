@@ -1,41 +1,40 @@
 <script setup lang="ts">
-import { useWindowScroll } from '@vueuse/core'
-import { Menu, X } from 'lucide-vue-next'
-import { onUnmounted, ref } from 'vue'
+import { useWindowScroll } from "@vueuse/core";
+import { Menu, X } from "lucide-vue-next";
+import { onUnmounted, ref } from "vue";
 
 const { homeTarget, aboutTarget, contactTarget } = defineProps<{
-  homeTarget: boolean
-  aboutTarget: boolean
-  contactTarget: boolean
-}>()
+  homeTarget: boolean;
+  aboutTarget: boolean;
+  contactTarget: boolean;
+}>();
 
-const isOpen = ref(false)
+const isOpen = ref(false);
 
-const { y } = useWindowScroll()
+const { y } = useWindowScroll();
 
 function toggleMenu() {
-  isOpen.value = !isOpen.value
-  toggleScrollLock()
+  isOpen.value = !isOpen.value;
+  toggleScrollLock();
 }
 
 // Function to close menu
 function closeMenu() {
-  isOpen.value = false
-  toggleScrollLock()
+  isOpen.value = false;
+  toggleScrollLock();
 }
 
 function toggleScrollLock() {
   if (isOpen.value) {
-    document.body.style.overflow = 'hidden'
-  }
-  else {
-    document.body.style.overflow = ''
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
   }
 }
 
 onUnmounted(() => {
-  document.body.style.overflow = '' // Ensure scrolling is restored
-})
+  document.body.style.overflow = ""; // Ensure scrolling is restored
+});
 </script>
 
 <template>
@@ -47,42 +46,20 @@ onUnmounted(() => {
     class="flex h-24 w-full items-center justify-between border-b-2 border-blue-800 px-12 transition-colors duration-300 md:px-24"
   >
     <a href="#">
-      <img
-        v-if="y <= 0"
-        class="aspect-auto h-auto w-28"
-        src="../assets/logo.png"
-        alt="logo"
-      >
-      <img
-        v-else-if="y > 5"
-        class="aspect-auto h-auto w-28"
-        src="../assets/logo_light.png"
-        alt="logo"
-      >
+      <img v-if="y <= 0" class="aspect-auto h-auto w-28" src="../assets/logo.png" alt="logo" />
+      <img v-else-if="y > 5" class="aspect-auto h-auto w-28" src="../assets/logo_light.png" alt="logo" />
     </a>
 
     <nav class="hidden md:flex">
       <ul class="flex items-center gap-12 font-rubik text-lg font-semibold">
         <li>
-          <a
-            :class="{ 'text-blue-800': homeTarget }"
-            class="px-6 hover:text-blue-800"
-            href="#"
-          >Home</a>
+          <a :class="{ 'text-blue-800': homeTarget }" class="px-6 hover:text-blue-800" href="#">Home</a>
         </li>
         <li>
-          <a
-            :class="{ 'text-blue-800': aboutTarget }"
-            class="px-6 hover:text-blue-800"
-            href="#about"
-          >Ich</a>
+          <a :class="{ 'text-blue-800': aboutTarget }" class="px-6 hover:text-blue-800" href="#about">Ich</a>
         </li>
         <li>
-          <a
-            :class="{ 'text-blue-800': contactTarget }"
-            class="px-6 hover:text-blue-800"
-            href="#contact"
-          >Kontakt</a>
+          <a :class="{ 'text-blue-800': contactTarget }" class="px-6 hover:text-blue-800" href="#contact">Kontakt</a>
         </li>
       </ul>
     </nav>
@@ -117,18 +94,10 @@ onUnmounted(() => {
               <a class="p-6 hover:text-blue-800" href="#" @click="closeMenu">Home</a>
             </li>
             <li>
-              <a
-                class="p-6 hover:text-blue-800"
-                href="#about"
-                @click="closeMenu"
-              >Ich</a>
+              <a class="p-6 hover:text-blue-800" href="#about" @click="closeMenu">Ich</a>
             </li>
             <li>
-              <a
-                class="m-6 hover:text-blue-800"
-                href="#contact"
-                @click="closeMenu"
-              >Kontakt</a>
+              <a class="m-6 hover:text-blue-800" href="#contact" @click="closeMenu">Kontakt</a>
             </li>
           </ul>
         </div>
