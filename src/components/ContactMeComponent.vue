@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Copy, Github, Instagram, Linkedin } from "lucide-vue-next";
+import { Copy, Github, Instagram } from "lucide-vue-next";
 import { ref } from "vue";
 import TooltipComponent from "../components/TooltipComponent.vue";
 
