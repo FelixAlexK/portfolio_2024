@@ -1,35 +1,51 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ButtonComponent from './ButtonComponent.vue';
+</script>
+
+<script setup lang="ts">
+</script>
 
 <template>
-  <section v-once class="h-1/3">
-    <div class="w-full">
-      <div class="flex h-full flex-col-reverse gap-24 md:flex-row">
+  <section v-once class="h-auto py-16  ">
+    <div class="w-full px-8 md:px-16">
+      <div class="flex h-full flex-col-reverse gap-16 md:flex-row">
+        <!-- Left Section -->
         <div class="flex flex-col md:w-1/2">
-          <span class="mb-1 font-rubik text-xs text-blue-800 md:text-sm">Meine Leidenschaft</span>
-          <h2 class="mb-8 font-lato text-4xl font-semibold md:text-6xl">Technik. Sport. Musik.</h2>
-          <span class="font-rubik text-base md:mb-16 md:max-w-prose md:text-lg"
-            >Ich liebe es, meine Leidenschaften zu verbinden und Menschen durch Technologie, Sport und Musik zu
+          <span class="mb-2 font-rubik text-sm uppercase tracking-wide text-blue-800 md:text-base">
+            Meine Leidenschaft
+          </span>
+          <h2 class="mb-6 font-lato text-4xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl">
+            Technik. Sport. Musik.
+          </h2>
+          <p class="font-rubik text-base text-gray-700 md:mb-12 md:max-w-prose md:text-lg">
+            Ich liebe es, meine Leidenschaften zu verbinden und Menschen durch Technologie, Sport und Musik zu
             inspirieren. Als technikbegeisterter Student kombiniere ich Kreativität und Innovation, während ich in
             meiner Freizeit beim Tennis oder Fußball Energie tanke. Mit meiner Vorliebe für den warmen Klang von
-            Schallplatten entdecke ich immer wieder neue musikalische Welten, die mich berühren und inspirieren.</span
-          >
+            Schallplatten entdecke ich immer wieder neue musikalische Welten, die mich berühren und inspirieren.
+          </p>
+          <ButtonComponent href="#about" text="Das bin ich" />
         </div>
-        <div class="flex flex-col max-md:gap-16 md:w-1/2 md:justify-around">
-          <div class="flex flex-col">
-            <span class="mb-2 font-lato text-6xl font-extrabold text-blue-800">22 Jahre</span>
-            <span class="font-lato text-2xl">Alter</span>
+
+        <!-- Right Section -->
+        <div class="flex flex-col items-center gap-12 md:w-1/2 md:justify-around">
+          <div class="flex flex-col items-center">
+            <span
+              class="mb-2 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-500 bg-clip-text text-6xl font-extrabold text-transparent"
+            >
+              22 Jahre
+            </span>
+            <span class="font-lato text-2xl text-gray-800">Alter</span>
           </div>
-          <div class="flex flex-col">
-            <span class="mb-2 font-lato text-6xl font-extrabold text-blue-800">Student</span>
-            <span class="font-lato text-2xl">Berufsstatus</span>
+          <div class="flex flex-col items-center">
+            <span
+              class="mb-2 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-500 bg-clip-text text-6xl font-extrabold text-transparent"
+            >
+              Student
+            </span>
+            <span class="font-lato text-2xl text-gray-800">Berufsstatus</span>
           </div>
         </div>
       </div>
-    </div>
-    <div class="hidden md:block">
-      <a href="#about" class="rounded-2xl bg-gray-950 px-16 py-4 font-rubik text-lg font-medium text-white"
-        >Das bin ich</a
-      >
     </div>
   </section>
 </template>
