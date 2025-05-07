@@ -50,8 +50,7 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
         <div id="about" class="invisible relative -top-32 block" />
         <AboutComponent ref="aboutTarget" class="mb-32 md:mb-64" />
         <div id="contact" class="invisible relative -top-32 block" />
-        <!-- <ContactComponent class="mb-32 md:mb-64" ref="contactTarget"></ContactComponent> -->
-        <ContactMeComponent ref="contactTarget" />
+        <ContactMeComponent ref="contactTarget" class="mb-32 md:mb-64" />
       </div>
     </main>
 
@@ -74,14 +73,7 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
             <span>Instagram</span>
           </TooltipComponent>
 
-          <TooltipComponent>
-            <template #trigger>
-              <a aria-label="Link to Linkedin" class="transition-colors duration-300 hover:text-blue-800" href="">
-                <Linkedin />
-              </a>
-            </template>
-            <span>Linkedin</span>
-          </TooltipComponent>
+          
           <TooltipComponent>
             <template #trigger>
               <a
