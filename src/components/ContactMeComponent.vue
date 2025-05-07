@@ -31,20 +31,21 @@ function copyToClipboard() {
 </script>
 
 <template>
-  <section class="">
-    <div class="w-full rounded-xl bg-gray-100 p-4 md:p-16">
-      <h2 class="mb-1 font-lato text-4xl font-bold md:text-6xl">Kontaktiere mich</h2>
-      <p class="mb-16 font-rubik text-base md:text-lg">
+  <section class="py-16">
+    <div class="w-full p-8 md:p-16 border border-blue-800 rounded-3xl shadow-lg bg-white">
+      <h2 class="mb-4 font-lato text-4xl font-bold text-gray-900 md:text-6xl">Kontaktiere mich</h2>
+      <p class="mb-12 font-rubik text-base text-gray-700 md:text-lg">
         Schreibe mir eine E-Mail oder schau auf meinen Social-Media-Kanälen vorbei.
       </p>
-      <div class="mb-8 flex flex-row items-center md:gap-4">
-        <span class="font-rubik text-xl font-bold md:text-2xl">felixk.dev@proton.me</span>
+      <div class="mb-12 flex flex-col items-start gap-4 md:flex-row md:items-center">
+        <span class="font-rubik text-xl font-bold text-gray-800 md:text-2xl">felixk.dev@proton.me</span>
         <button
           aria-label="copy email"
-          class="relative hidden rounded px-2 py-1 hover:text-blue-800 md:block"
+          class="relative flex items-center gap-2 rounded bg-blue-800 px-4 py-2 text-white shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
           @click="copyToClipboard"
         >
           <Copy />
+          <span>Kopieren</span>
         </button>
         <Transition :duration="550" name="nested">
           <div
@@ -55,12 +56,12 @@ function copyToClipboard() {
           </div>
         </Transition>
       </div>
-      <div class="flex gap-16">
+      <div class="flex justify-center gap-16">
         <TooltipComponent>
           <template #trigger>
             <a
               aria-label="Link to Instagram"
-              class="transition-colors duration-300 hover:text-blue-800"
+              class="transition-transform duration-300 hover:scale-110 hover:text-blue-800"
               href="https://www.instagram.com/felix.k.02"
               target="_blank"
             >
@@ -70,19 +71,13 @@ function copyToClipboard() {
           <span>Instagram</span>
         </TooltipComponent>
 
-        <TooltipComponent>
-          <template #trigger>
-            <a aria-label="Link to Linkedin" class="transition-colors duration-300 hover:text-blue-800" href="">
-              <Linkedin />
-            </a>
-          </template>
-          <span>Linkedin</span>
-        </TooltipComponent>
+        
+
         <TooltipComponent>
           <template #trigger>
             <a
               aria-label="Link to Github"
-              class="transition-colors duration-300 hover:text-blue-800"
+              class="transition-transform duration-300 hover:scale-110 hover:text-blue-800"
               href="https://github.com/FelixAlexK"
               target="_blank"
             >
@@ -97,11 +92,11 @@ function copyToClipboard() {
 </template>
 
 <style lang="css">
-nested-enter-active,
+.nested-enter-active,
 .nested-leave-active {
   transition: all 0.3s ease-in-out;
 }
-/* delay leave of parent element */
+
 .nested-leave-active {
   transition-delay: 0.25s;
 }
@@ -112,12 +107,6 @@ nested-enter-active,
   opacity: 0;
 }
 
-/* we can also transition nested elements using nested selectors */
-.nested-enter-active,
-.nested-leave-active {
-  transition: all 0.3s ease-in-out;
-}
-/* delay enter of nested element */
 .nested-enter-active {
   transition-delay: 0.25s;
 }
