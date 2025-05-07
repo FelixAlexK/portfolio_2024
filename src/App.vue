@@ -2,7 +2,7 @@
 import type { MaybeElement } from "@vueuse/core";
 import type { Ref } from "vue";
 import { useIntersectionObserver } from "@vueuse/core";
-import { Github, Instagram, Linkedin } from "lucide-vue-next";
+import { Github, Instagram } from "lucide-vue-next";
 import { ref, useTemplateRef } from "vue";
 import AboutComponent from "./components/AboutComponent.vue";
 import ContactMeComponent from "./components/ContactMeComponent.vue";
