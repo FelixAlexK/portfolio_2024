@@ -21,6 +21,7 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@vueuse/core": "^12.7.0",
     "axios": "^1.8.1",
+    "buttercms": "^3.0.2",
     "eslint-config-prettier": "^10.0.2",
     "eslint-plugin-prettier": "^5.2.3",
     "lucide-vue-next": "^0.473.0",
