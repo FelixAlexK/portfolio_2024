@@ -5,10 +5,10 @@ import { useIntersectionObserver } from "@vueuse/core";
 import { Github, Instagram } from "lucide-vue-next";
 import { ref, useTemplateRef } from "vue";
 import AboutComponent from "./components/AboutComponent.vue";
-import ContactMeComponent from "./components/ContactMeComponent.vue";
-import MyPassionComponent from "./components/MyPassionComponent.vue";
+import ContactMeComponent from "./components/ContactComponent.vue";
 import NavComponent from "./components/NavComponent.vue";
-import RepoScroller from "./components/RepoScroller.vue";
+import MyPassionComponent from "./components/PassionComponent.vue";
+import RepoScroller from "./components/RepositoryCarouselComponent.vue";
 import TooltipComponent from "./components/TooltipComponent.vue";
 
 function setupIntersectionObserver(target: Ref<MaybeElement, MaybeElement>, visibilityFlag: Ref<boolean, boolean>) {

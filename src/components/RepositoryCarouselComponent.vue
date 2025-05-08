@@ -3,7 +3,7 @@ import { useAsyncState } from "@vueuse/core";
 import { ChevronLeft, ChevronRight } from "lucide-vue-next";
 import { ref } from "vue";
 import { getUserPublicRepos } from "../services/api";
-import ButtonComponent from "./ButtonComponent.vue";
+import ButtonComponent from "./GradientButtonComponent.vue";
 
 
 const currentScrollIndex = ref(0);
