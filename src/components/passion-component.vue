@@ -30,7 +30,7 @@ import ButtonComponent from "./gradient-button-component.vue";
         <div class="flex flex-col items-center gap-12 md:w-1/2 md:justify-around">
           <div class="flex flex-col items-center">
             <span
-              class="mb-2 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-500 bg-clip-text text-6xl font-extrabold text-transparent"
+              class="mb-2 bg-gradient-to-tr from-blue-800 via-blue-600 to-blue-500 bg-clip-text text-6xl font-extrabold text-transparent"
             >
               22 Jahre
             </span>
@@ -38,7 +38,7 @@ import ButtonComponent from "./gradient-button-component.vue";
           </div>
           <div class="flex flex-col items-center">
             <span
-              class="mb-2 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-500 bg-clip-text text-6xl font-extrabold text-transparent"
+              class="mb-2 bg-gradient-to-tr from-blue-800 via-blue-600 to-blue-500 bg-clip-text text-6xl font-extrabold text-transparent"
             >
               Student
             </span>
