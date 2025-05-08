@@ -1,18 +1,16 @@
 import axios from "axios";
 
-
-export interface Repository {
+export type Repository = {
   name: string;
   description: string;
   html_url: string;
-}
+};
 
 const GITHUB_API_URL = "https://api.github.com";
 const token = import.meta.env.VITE_GITHUB_TOKEN as string;
 
 export async function getUserPublicRepos(username: string, accessToken: string = token) {
   try {
-
     const response = await axios.get(`${GITHUB_API_URL}/users/${username}/repos`, {
       headers: {
         Authorization: `token ${accessToken}`,
@@ -26,7 +24,8 @@ export async function getUserPublicRepos(username: string, accessToken: string =
     }));
 
     return repositories;
-  } catch (error) {
+  }
+  catch (error) {
     console.error("Error fetching public repositories:", error);
     throw error;
   }

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import ButtonComponent from './GradientButtonComponent.vue';
-
+import ButtonComponent from "./gradient-button-component.vue";
 </script>
 
 <script setup lang="ts">
@@ -21,7 +20,7 @@ import ButtonComponent from './GradientButtonComponent.vue';
             type="image/webp"
             class="aspect-square w-80 rounded-3xl object-cover object-center shadow-lg md:mb-16"
             loading="lazy"
-          />
+          >
 
           <!-- Fallback format (JPEG/PNG) -->
           <source
@@ -29,7 +28,7 @@ import ButtonComponent from './GradientButtonComponent.vue';
             type="image/jpeg"
             class="aspect-square w-80 rounded-3xl object-cover object-center shadow-lg md:mb-16"
             loading="lazy"
-          />
+          >
 
           <!-- Default fallback for unsupported browsers -->
           <img
@@ -37,7 +36,7 @@ import ButtonComponent from './GradientButtonComponent.vue';
             alt="Picture of Felix"
             class="aspect-square w-80 rounded-3xl object-cover object-center shadow-lg md:mb-16"
             loading="lazy"
-          />
+          >
         </picture>
         <ButtonComponent
           href="#contact"

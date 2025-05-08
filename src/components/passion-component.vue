@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ButtonComponent from './GradientButtonComponent.vue';
+import ButtonComponent from "./gradient-button-component.vue";
 </script>
 
 <script setup lang="ts">

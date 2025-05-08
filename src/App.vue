@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import type { MaybeElement } from "@vueuse/core";
 import type { Ref } from "vue";
+
 import { useIntersectionObserver } from "@vueuse/core";
 import { Github, Instagram } from "lucide-vue-next";
 import { ref, useTemplateRef } from "vue";
-import AboutComponent from "./components/AboutComponent.vue";
-import ContactMeComponent from "./components/ContactComponent.vue";
-import NavComponent from "./components/NavComponent.vue";
-import MyPassionComponent from "./components/PassionComponent.vue";
-import RepoScroller from "./components/RepositoryCarouselComponent.vue";
-import TooltipComponent from "./components/TooltipComponent.vue";
+
+import AboutComponent from "./components/about-component.vue";
+import ContactMeComponent from "./components/contact-component.vue";
+import NavComponent from "./components/nav-component.vue";
+import MyPassionComponent from "./components/passion-component.vue";
+import RepoScroller from "./components/repository-carousel-component.vue";
+import TooltipComponent from "./components/tooltip-component.vue";
 
 function setupIntersectionObserver(target: Ref<MaybeElement, MaybeElement>, visibilityFlag: Ref<boolean, boolean>) {
   useIntersectionObserver(
@@ -56,7 +58,7 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
 
     <footer class="border-t-2 border-blue-800 bg-gray-950 p-8 text-white md:p-16">
       <div class="flex font-rubik max-md:flex-col md:items-center md:justify-between">
-        <img class="aspect-auto h-auto w-28 max-md:mb-8" src="./assets/logo_light.png" alt="logo" />
+        <img class="aspect-auto h-auto w-28 max-md:mb-8" src="./assets/logo_light.png" alt="logo">
 
         <div class="flex gap-16">
           <TooltipComponent>
@@ -73,7 +75,6 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
             <span>Instagram</span>
           </TooltipComponent>
 
-          
           <TooltipComponent>
             <template #trigger>
               <a

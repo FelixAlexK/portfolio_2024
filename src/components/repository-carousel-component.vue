@@ -2,16 +2,15 @@
 import { useAsyncState } from "@vueuse/core";
 import { ChevronLeft, ChevronRight } from "lucide-vue-next";
 import { ref } from "vue";
-import { getUserPublicRepos } from "../services/api";
-import ButtonComponent from "./GradientButtonComponent.vue";
 
+import { getUserPublicRepos } from "../services/api";
+import ButtonComponent from "./gradient-button-component.vue";
 
 const currentScrollIndex = ref(0);
 ;
 
-
 const { state, isReady, isLoading } = useAsyncState(
-  getUserPublicRepos("FelixAlexK").then((data) => data),
+  getUserPublicRepos("FelixAlexK").then(data => data),
   [],
 );
 
@@ -21,13 +20,16 @@ function scrollLeftOrRight(direction: "left" | "right") {
   if (direction === "left") {
     if (currentScrollIndex.value === 0) {
       currentScrollIndex.value = scrollLimit;
-    } else {
+    }
+    else {
       currentScrollIndex.value -= 1;
     }
-  } else {
+  }
+  else {
     if (currentScrollIndex.value === scrollLimit) {
       currentScrollIndex.value = 0;
-    } else {
+    }
+    else {
       currentScrollIndex.value += 1;
     }
   }
@@ -59,11 +61,13 @@ function scrollLeftOrRight(direction: "left" | "right") {
             <p class="mb-8 max-h-20 overflow-hidden whitespace-normal font-rubik text-lg text-gray-700">
               {{ state[currentScrollIndex].description || "Keine Beschreibung verfügbar." }}
             </p>
-            
-            <ButtonComponent :href="state[currentScrollIndex].html_url" text="Repository ansehen"></ButtonComponent>
+
+            <ButtonComponent :href="state[currentScrollIndex].html_url" text="Repository ansehen" />
           </div>
           <div v-else class="flex flex-col items-center gap-8">
-            <h3 class="font-lato text-4xl font-bold text-gray-900">Loading...</h3>
+            <h3 class="font-lato text-4xl font-bold text-gray-900">
+              Loading...
+            </h3>
           </div>
         </div>
 

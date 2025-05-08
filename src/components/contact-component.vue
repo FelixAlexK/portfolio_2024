@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { Copy, Github, Instagram } from "lucide-vue-next";
 import { ref } from "vue";
-import TooltipComponent from "../components/TooltipComponent.vue";
+
+import TooltipComponent from "./tooltip-component.vue";
 
 const copied = ref(false);
 
@@ -33,7 +34,9 @@ function copyToClipboard() {
 <template>
   <section class="py-16">
     <div class="w-full p-8 md:p-16 border border-blue-800 rounded-3xl shadow-lg bg-white">
-      <h2 class="mb-4 font-lato text-4xl font-bold text-gray-900 md:text-6xl">Kontaktiere mich</h2>
+      <h2 class="mb-4 font-lato text-4xl font-bold text-gray-900 md:text-6xl">
+        Kontaktiere mich
+      </h2>
       <p class="mb-12 font-rubik text-base text-gray-700 md:text-lg">
         Schreibe mir eine E-Mail oder schau auf meinen Social-Media-Kanälen vorbei.
       </p>
@@ -70,8 +73,6 @@ function copyToClipboard() {
           </template>
           <span>Instagram</span>
         </TooltipComponent>
-
-        
 
         <TooltipComponent>
           <template #trigger>

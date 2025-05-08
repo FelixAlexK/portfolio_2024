@@ -1,12 +1,10 @@
 <script setup lang="ts">
-
-
-const { text = 'Button' } = defineProps<{
-	  text?: string;
+const { text = "Button" } = defineProps<{
+  text?: string;
   href?: string;
 }>();
 
-defineEmits(['click']);
+defineEmits(["click"]);
 </script>
 
 <template>
@@ -21,7 +19,6 @@ defineEmits(['click']);
       </a>
     </template>
     <template v-else>
-      
       <button
         class="rounded-2xl bg-gradient-to-r from-blue-800 via-blue-600 to-blue-500 px-16 py-4 font-rubik text-lg font-medium text-white shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
         @click="$emit('click')"

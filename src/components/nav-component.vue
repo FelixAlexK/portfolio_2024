@@ -27,7 +27,8 @@ function closeMenu() {
 function toggleScrollLock() {
   if (isOpen.value) {
     document.body.style.overflow = "hidden";
-  } else {
+  }
+  else {
     document.body.style.overflow = "";
   }
 }
@@ -52,13 +53,13 @@ onUnmounted(() => {
         class="aspect-auto h-auto w-24 transition-transform duration-300 hover:scale-105"
         src="../assets/logo.png"
         alt="logo"
-      />
+      >
       <img
         v-else-if="y > 5"
         class="aspect-auto h-auto w-24 transition-transform duration-300 hover:scale-105"
         src="../assets/logo_light.png"
         alt="logo"
-      />
+      >
     </a>
 
     <!-- Desktop Navigation -->
