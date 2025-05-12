@@ -57,39 +57,42 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
     </main>
 
     <footer class="border-t-2 border-blue-800 bg-gray-950 p-8 text-white md:p-16">
-      <div class="flex font-rubik max-md:flex-col md:items-center md:justify-between">
-        <img class="aspect-auto h-auto w-28 max-md:mb-8" src="./assets/logo_light.png" alt="logo">
+      <div>
+        <div class="flex font-rubik max-md:flex-col md:items-center md:justify-between">
+          <img class="aspect-auto h-auto w-28 max-md:mb-8" src="./assets/logo_light.png" alt="logo">
 
-        <div class="flex gap-16">
-          <TooltipComponent>
-            <template #trigger>
-              <a
-                aria-label="Link to Instagram"
-                class="transition-colors duration-300 hover:text-blue-800"
-                href="https://www.instagram.com/felix.k.02"
-                target="_blank"
-              >
-                <Instagram />
-              </a>
-            </template>
-            <span>Instagram</span>
-          </TooltipComponent>
+          <div class="flex gap-16">
+            <TooltipComponent>
+              <template #trigger>
+                <a
+                  aria-label="Link to Instagram"
+                  class="transition-colors duration-300 hover:text-blue-800"
+                  href="https://www.instagram.com/felix.k.02"
+                  target="_blank"
+                >
+                  <Instagram />
+                </a>
+              </template>
+              <span>Instagram</span>
+            </TooltipComponent>
 
-          <TooltipComponent>
-            <template #trigger>
-              <a
-                aria-label="Link to Github"
-                class="transition-colors duration-300 hover:text-blue-800"
-                href="https://github.com/FelixAlexK"
-                target="_blank"
-              >
-                <Github />
-              </a>
-            </template>
-            <span>Github</span>
-          </TooltipComponent>
+            <TooltipComponent>
+              <template #trigger>
+                <a
+                  aria-label="Link to Github"
+                  class="transition-colors duration-300 hover:text-blue-800"
+                  href="https://github.com/FelixAlexK"
+                  target="_blank"
+                >
+                  <Github />
+                </a>
+              </template>
+              <span>Github</span>
+            </TooltipComponent>
+          </div>
         </div>
       </div>
+      <span class="font-lato ">© 2025 Felix Kuhbier</span>
     </footer>
   </div>
 </template>
