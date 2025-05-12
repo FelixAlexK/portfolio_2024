@@ -6,7 +6,7 @@ import TooltipComponent from "./tooltip-component.vue";
 
 const copied = ref(false);
 
-let intervalIdCopying: number | undefined;
+let intervalIdCopying: ReturnType<typeof setInterval> | undefined;
 
 function copyToClipboard() {
   navigator.clipboard

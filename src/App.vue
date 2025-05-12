@@ -4,7 +4,7 @@ import type { Ref } from "vue";
 
 import { useIntersectionObserver } from "@vueuse/core";
 import { Github, Instagram } from "lucide-vue-next";
-import { ref, useTemplateRef } from "vue";
+import { onMounted, ref, useTemplateRef } from "vue";
 
 import AboutComponent from "./components/about-component.vue";
 import ContactMeComponent from "./components/contact-component.vue";
@@ -12,6 +12,25 @@ import NavComponent from "./components/nav-component.vue";
 import MyPassionComponent from "./components/passion-component.vue";
 import RepoScroller from "./components/repository-carousel-component.vue";
 import TooltipComponent from "./components/tooltip-component.vue";
+import { getCurrentlyPlayingTrack } from "./services/spotify";
+
+const currentTrack = ref<string>("Loading...");
+
+onMounted(async () => {
+  try {
+    const track = await getCurrentlyPlayingTrack();
+    if (track && track.item) {
+      currentTrack.value = `${track.item}`;
+      console.log(track.item);
+    }
+    else {
+      currentTrack.value = "No track is currently playing.";
+    }
+  }
+  catch {
+    currentTrack.value = "Error fetching currently playing track.";
+  }
+});
 
 function setupIntersectionObserver(target: Ref<MaybeElement, MaybeElement>, visibilityFlag: Ref<boolean, boolean>) {
   useIntersectionObserver(
@@ -47,8 +66,9 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
     </header>
     <main>
       <div class="h-full p-8 md:container md:mx-auto">
-        <MyPassionComponent ref="homeTarget" class="my-32 md:my-64" />
+        <MyPassionComponent ref="homeTarget" class="mb-32 mt-16 md:mb-64 md:mt-32" />
         <RepoScroller class="mb-32 md:mb-64" />
+        {{ currentTrack }}
         <div id="about" class="invisible relative -top-32 block" />
         <AboutComponent ref="aboutTarget" class="mb-32 md:mb-64" />
         <div id="contact" class="invisible relative -top-32 block" />

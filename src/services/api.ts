@@ -12,6 +12,7 @@ const token = import.meta.env.VITE_GITHUB_TOKEN as string;
 export async function getUserPublicRepos(username: string, accessToken: string = token) {
   try {
     const response = await axios.get(`${GITHUB_API_URL}/users/${username}/repos`, {
+
       headers: {
         Authorization: `token ${accessToken}`,
       },
