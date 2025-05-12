@@ -48,24 +48,16 @@ import ButtonComponent from "./gradient-button-component.vue";
       <!-- Right Section -->
       <div class="flex w-full flex-col gap-8 md:mt-8 md:w-2/3 md:gap-16">
         <span class="font-rubik text-xl leading-8 text-gray-800 md:text-2xl">
-          Ich bin ein vielseitig interessierter Student mit einer großen Begeisterung für Technik, Sport und Musik.
-          Schon früh hat mich die Faszination für Technologie gepackt – ich liebe es, innovative Lösungen zu entwickeln
-          und neue Projekte anzupacken. Mein Angewandte Informatik Studium ist die perfekte Grundlage, um meine
-          Leidenschaft für technologische Herausforderungen mit kreativem Denken zu verbinden.
+          Ich liebe es, mich in neue Themen zu vertiefen, kreative Lösungen zu finden und dabei über mich hinauszuwachsen. Ob beim Programmieren, im Sport oder auf Reisen – ich suche Herausforderungen, die mich fordern und formen.
         </span>
 
         <div class="flex flex-col gap-8 md:flex-row">
           <span class="font-rubik text-base text-gray-700 md:text-lg">
-            Neben meinem Studium spielt Sport eine zentrale Rolle in meinem Leben. Vor allem Tennis und Fußball
-            begeistern mich, denn sie vereinen Wettbewerb, Teamgeist und körperliche Fitness auf einzigartige Weise. Die
-            Energie und der Fokus, die ich auf dem Spielfeld erlebe, motivieren mich auch in anderen Bereichen meines
-            Lebens, mein Bestes zu geben.
+            Seit meinem Studium der Informatik habe ich eine besondere Leidenschaft für Webentwicklung entwickelt. Der Mix aus technischem Denken und kreativem Gestalten fasziniert mich immer wieder aufs Neue. Ich arbeite gerne strukturiert, aber auch mit dem Blick für das große Ganze – besonders bei Projekten, die echten Mehrwert für andere schaffen.
           </span>
 
           <span class="font-rubik text-base text-gray-700 md:text-lg">
-            Ein weiteres Herzstück meines Lebens ist die Musik. Ich liebe den warmen, unvergleichlichen Klang von
-            Schallplatten, die für mich mehr als nur Musik transportieren – sie erzählen Geschichten. Egal ob Klassiker
-            oder neue Künstler, ich finde Inspiration und Ruhe in diesen Klängen, die mich immer wieder begleiten.
+            In meiner Freizeit bin ich sportlich unterwegs: Laufen, Tennis und Fußball gehören zu meinem Alltag und helfen mir, einen klaren Kopf zu bewahren. Reisen und das Kennenlernen neuer Kulturen inspirieren mich zusätzlich – sie bringen neue Ideen, Perspektiven und manchmal auch den nötigen Abstand, um mit frischer Energie weiterzumachen.
           </span>
         </div>
       </div>
