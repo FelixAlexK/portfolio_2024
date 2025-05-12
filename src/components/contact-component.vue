@@ -5,12 +5,12 @@ import { ref } from "vue";
 import TooltipComponent from "./tooltip-component.vue";
 
 const copied = ref(false);
-
+const email = ref<string | undefined>(import.meta.env.VITE_EMAIL as string);
 let intervalIdCopying: ReturnType<typeof setInterval> | undefined;
 
 function copyToClipboard() {
   navigator.clipboard
-    .writeText(import.meta.env.VITE_EMAIL)
+    .writeText(email.value!)
     .then(() => {
       copied.value = true;
     })
@@ -32,7 +32,7 @@ function copyToClipboard() {
 </script>
 
 <template>
-  <section class="py-16">
+  <section v-if="email" class="py-16">
     <div class="w-full p-8 md:p-16 border border-blue-800 rounded-3xl shadow-lg bg-white">
       <h2 class="mb-4 font-lato text-4xl font-bold text-gray-900 md:text-6xl">
         Kontaktiere mich
@@ -41,7 +41,7 @@ function copyToClipboard() {
         Schreibe mir eine E-Mail oder schau auf meinen Social-Media-Kanälen vorbei.
       </p>
       <div class="mb-12 flex flex-col items-start gap-4 md:flex-row md:items-center">
-        <span class="font-rubik text-xl font-bold text-gray-800 md:text-2xl">felixk.dev@proton.me</span>
+        <span class="font-rubik text-xl font-bold text-gray-800 md:text-2xl">{{ email }}</span>
         <button
           aria-label="copy email"
           class="relative flex items-center gap-2 rounded bg-blue-800 px-4 py-2 text-white shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
