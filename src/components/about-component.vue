@@ -1,8 +1,6 @@
 <script setup lang="ts">
+import { frontmatter } from "../components/content/about.md";
 import ButtonComponent from "./gradient-button-component.vue";
-</script>
-
-<script setup lang="ts">
 </script>
 
 <template>
@@ -11,7 +9,7 @@ import ButtonComponent from "./gradient-button-component.vue";
       <!-- Left Section -->
       <div class="flex w-full flex-col items-center md:w-1/3 md:items-start">
         <h2 class="mb-8 font-lato text-4xl font-semibold text-gray-900 md:text-6xl">
-          Hi, ich bin Felix
+          {{ frontmatter.title }}
         </h2>
         <picture>
           <!-- Modern format (WebP) -->
@@ -48,16 +46,14 @@ import ButtonComponent from "./gradient-button-component.vue";
       <!-- Right Section -->
       <div class="flex w-full flex-col gap-8 md:mt-8 md:w-2/3 md:gap-16">
         <span class="font-rubik text-xl leading-8 text-gray-800 md:text-2xl">
-          Ich liebe es, mich in neue Themen zu vertiefen, kreative Lösungen zu finden und dabei über mich hinauszuwachsen. Ob beim Programmieren, im Sport oder auf Reisen – ich suche Herausforderungen, die mich fordern und formen.
-        </span>
+          {{ frontmatter.mainText }}        </span>
 
         <div class="flex flex-col gap-8 md:flex-row">
           <span class="font-rubik text-base text-gray-700 md:text-lg">
-            Seit meinem Studium der Informatik habe ich eine besondere Leidenschaft für Webentwicklung entwickelt. Der Mix aus technischem Denken und kreativem Gestalten fasziniert mich immer wieder aufs Neue. Ich arbeite gerne strukturiert, aber auch mit dem Blick für das große Ganze – besonders bei Projekten, die echten Mehrwert für andere schaffen.
-          </span>
+            {{ frontmatter.paragraphOne }}          </span>
 
           <span class="font-rubik text-base text-gray-700 md:text-lg">
-            In meiner Freizeit bin ich sportlich unterwegs: Laufen, Tennis und Fußball gehören zu meinem Alltag und helfen mir, einen klaren Kopf zu bewahren. Reisen und das Kennenlernen neuer Kulturen inspirieren mich zusätzlich – sie bringen neue Ideen, Perspektiven und manchmal auch den nötigen Abstand, um mit frischer Energie weiterzumachen.
+            {{ frontmatter.paragraphTwo }}
           </span>
         </div>
       </div>

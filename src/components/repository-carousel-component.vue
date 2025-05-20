@@ -3,14 +3,14 @@ import { useAsyncState } from "@vueuse/core";
 import { ChevronLeft, ChevronRight } from "lucide-vue-next";
 import { ref } from "vue";
 
+import { frontmatter } from "../components/content/repo.md";
 import { getUserPublicRepos } from "../services/api";
 import ButtonComponent from "./gradient-button-component.vue";
 
 const currentScrollIndex = ref(0);
-;
 
 const { state, isReady, isLoading } = useAsyncState(
-  getUserPublicRepos("FelixAlexK").then(data => data),
+  getUserPublicRepos().then(data => data),
   [],
 );
 
@@ -39,7 +39,7 @@ function scrollLeftOrRight(direction: "left" | "right") {
 <template>
   <div class="hidden h-96 w-full flex-col items-center rounded-3xl bg-gradient-to-r from-gray-100 to-gray-200 p-8 shadow-lg md:flex">
     <span class="mb-4 flex w-full justify-start font-rubik text-sm text-blue-800 uppercase tracking-wide">
-      Öffentliche Repositories
+      {{ frontmatter.sectionTitle }}
     </span>
     <div class="flex h-full w-full flex-col items-center justify-center">
       <div class="flex w-full flex-row items-center justify-between">
@@ -58,7 +58,7 @@ function scrollLeftOrRight(direction: "left" | "right") {
             <h3 class="mb-4 font-lato text-4xl font-bold text-gray-900">
               {{ state[currentScrollIndex].name }}
             </h3>
-            <p class="mb-8 max-h-20 overflow-hidden whitespace-normal font-rubik text-lg text-gray-700">
+            <p class="mb-16 max-h-20 overflow-hidden whitespace-normal font-rubik text-lg text-gray-700">
               {{ state[currentScrollIndex].description || "Keine Beschreibung verfügbar." }}
             </p>
 

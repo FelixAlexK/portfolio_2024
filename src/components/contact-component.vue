@@ -2,6 +2,7 @@
 import { Copy, Github, Instagram } from "lucide-vue-next";
 import { ref } from "vue";
 
+import { frontmatter } from "../components/content/contact.md";
 import TooltipComponent from "./tooltip-component.vue";
 
 const copied = ref(false);
@@ -35,10 +36,10 @@ function copyToClipboard() {
   <section v-if="email" class="py-16">
     <div class="w-full p-8 md:p-16 border border-blue-800 rounded-3xl shadow-lg bg-white">
       <h2 class="mb-4 font-lato text-4xl font-bold text-gray-900 md:text-6xl">
-        Kontaktiere mich
+        {{ frontmatter.title }}
       </h2>
       <p class="mb-12 font-rubik text-base text-gray-700 md:text-lg">
-        Schreibe mir eine E-Mail oder schau auf meinen Social-Media-Kanälen vorbei.
+        {{ frontmatter.subtitle }}
       </p>
       <div class="mb-12 flex flex-col items-start gap-4 md:flex-row md:items-center">
         <span class="font-rubik text-xl font-bold text-gray-800 md:text-2xl">{{ email }}</span>
