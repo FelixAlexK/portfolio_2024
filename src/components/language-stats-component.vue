@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useAsyncState } from "@vueuse/core";
 import { ChevronDown, ChevronUp, Code } from "lucide-vue-next";
-import { computed, ref, watchEffect } from "vue";
+import { computed, ref } from "vue";
 
 import { getUserUsedLanguagesFromRepos } from "../services/api";
 

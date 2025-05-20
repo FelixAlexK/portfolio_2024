@@ -1,6 +1,5 @@
 import axios from "axios";
 
-import colorsData from "../assets/github-colors.json";
 import { getColor } from "./utils";
 
 export type Repository = {
