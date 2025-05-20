@@ -4,14 +4,16 @@ import type { Ref } from "vue";
 
 import { useIntersectionObserver } from "@vueuse/core";
 import { Github, Instagram } from "lucide-vue-next";
-import { ref, useTemplateRef } from "vue";
+import { onMounted, ref, useTemplateRef } from "vue";
 
 import AboutComponent from "./components/about-component.vue";
 import ContactMeComponent from "./components/contact-component.vue";
+import LanguageStatsComponent from "./components/language-stats-component.vue";
 import NavComponent from "./components/nav-component.vue";
 import MyPassionComponent from "./components/passion-component.vue";
 import RepoScroller from "./components/repository-carousel-component.vue";
 import TooltipComponent from "./components/tooltip-component.vue";
+import { updateColors } from "./services/utils";
 
 function setupIntersectionObserver(target: Ref<MaybeElement, MaybeElement>, visibilityFlag: Ref<boolean, boolean>) {
   useIntersectionObserver(
@@ -34,6 +36,10 @@ const contactTarget = useTemplateRef<MaybeElement>("contactTarget");
 setupIntersectionObserver(homeTarget, homeTargetIsVisible);
 setupIntersectionObserver(aboutTarget, aboutTargetIsVisible);
 setupIntersectionObserver(contactTarget, contactTargetIsVisible);
+
+onMounted(async () => {
+  await updateColors();
+});
 </script>
 
 <template>
@@ -48,8 +54,8 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
     <main>
       <div class="h-full p-8 md:container md:mx-auto">
         <MyPassionComponent ref="homeTarget" class="mb-32 mt-16 md:mb-64 md:mt-32" />
-        <RepoScroller class="mb-32 md:mb-64" />
-
+        <RepoScroller class="mb-8 md:mb-16" />
+        <LanguageStatsComponent class="mb-32 md:mb-64" />
         <div id="about" class="invisible relative -top-32 block" />
         <AboutComponent ref="aboutTarget" class="mb-32 md:mb-64" />
         <div id="contact" class="invisible relative -top-32 block" />
