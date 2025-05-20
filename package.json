@@ -9,8 +9,7 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "update-colors": "Bun run ./scripts/update-github-colors.ts"
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -29,6 +28,7 @@
     "eslint-plugin-prettier": "^5.2.3",
     "lucide-vue-next": "^0.473.0",
     "prettier-eslint": "^16.3.0",
+    "vite-plugin-md": "^0.21.5",
     "vite-plugin-node-polyfills": "^0.23.0",
     "vue": "^3.5.13",
     "vuetify": "^3.7.14"

@@ -13,9 +13,7 @@ export default defineConfig({
     tailwindcss(),
     nodePolyfills({
       include: ["fs"],
-      overrides: {
-        fs: "memfs",
-      },
+
       protocolImports: true,
     }),
   ],

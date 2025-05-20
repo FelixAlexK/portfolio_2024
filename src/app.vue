@@ -4,7 +4,7 @@ import type { Ref } from "vue";
 
 import { useIntersectionObserver } from "@vueuse/core";
 import { Github, Instagram } from "lucide-vue-next";
-import { onMounted, ref, useTemplateRef } from "vue";
+import { ref, useTemplateRef } from "vue";
 
 import AboutComponent from "./components/about-component.vue";
 import ContactMeComponent from "./components/contact-component.vue";
@@ -13,7 +13,6 @@ import NavComponent from "./components/nav-component.vue";
 import MyPassionComponent from "./components/passion-component.vue";
 import RepoScroller from "./components/repository-carousel-component.vue";
 import TooltipComponent from "./components/tooltip-component.vue";
-import { updateColors } from "./services/utils";
 
 function setupIntersectionObserver(target: Ref<MaybeElement, MaybeElement>, visibilityFlag: Ref<boolean, boolean>) {
   useIntersectionObserver(
@@ -36,10 +35,6 @@ const contactTarget = useTemplateRef<MaybeElement>("contactTarget");
 setupIntersectionObserver(homeTarget, homeTargetIsVisible);
 setupIntersectionObserver(aboutTarget, aboutTargetIsVisible);
 setupIntersectionObserver(contactTarget, contactTargetIsVisible);
-
-onMounted(async () => {
-  await updateColors();
-});
 </script>
 
 <template>
