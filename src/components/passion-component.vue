@@ -7,17 +7,17 @@ import ButtonComponent from "./gradient-button-component.vue";
 <template>
   <section v-once class="relative h-auto py-24">
     <!-- Background Gradient - Full Width -->
-    <div class="absolute inset-0 w-screen left-1/2 -translate-x-1/2 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100" />
+    <div class="absolute inset-0 w-screen left-1/2 -translate-x-1/2 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 -z-50" />
 
     <!-- Grid Pattern Background - Full Width -->
     <div class="absolute inset-0 w-screen left-1/2 -translate-x-1/2 opacity-10">
-      <div class="h-full w-full bg-grid-pattern bg-[length:40px_40px] bg-blue-900/20" />
+      <div class="h-full w-full bg-grid-pattern bg-[length:40px_40px] bg-blue-900/20 " />
     </div>
 
     <!-- Gradient Fade to White -->
     <div class="absolute bottom-0 w-screen left-1/2 -translate-x-1/2 h-32 bg-gradient-to-t from-white to-transparent" />
 
-    <div class="relative z-10 w-full px-8 md:px-16">
+    <div class="relative -z-10 w-full px-8 md:px-16">
       <div class="flex h-full flex-col-reverse gap-16 md:flex-row">
         <!-- Left Section -->
         <div class="flex flex-col md:w-1/2 backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:bg-white/30">
