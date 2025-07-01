@@ -2,6 +2,7 @@
 import { Copy, Github, Instagram } from "lucide-vue-next";
 import { ref } from "vue";
 
+// @ts-expect-error: Importing markdown file as Vue component is not typed
 import { frontmatter } from "../components/content/contact.md";
 import TooltipComponent from "./tooltip-component.vue";
 

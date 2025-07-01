@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-expect-error: Importing markdown file as Vue component is not typed
 import Content, { frontmatter } from "../components/content/passion.md";
 import ButtonComponent from "./gradient-button-component.vue";
 </script>
