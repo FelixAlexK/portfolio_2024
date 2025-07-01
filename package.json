@@ -12,7 +12,6 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "@fontsource/lato": "^5.1.1",
     "@fontsource/rubik": "^5.1.1",
     "@spotify/web-api-ts-sdk": "^1.2.0",
@@ -23,20 +22,17 @@
     "@types/node": "^22.15.19",
     "@vueuse/core": "^12.7.0",
     "axios": "^1.8.1",
-    "buttercms": "^3.0.2",
     "eslint-config-prettier": "^10.0.2",
     "eslint-plugin-prettier": "^5.2.3",
     "lucide-vue-next": "^0.473.0",
     "prettier-eslint": "^16.3.0",
     "vite-plugin-md": "^0.21.5",
     "vite-plugin-node-polyfills": "^0.23.0",
-    "vue": "^3.5.13",
-    "vuetify": "^3.7.14"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.3.0",
     "@eslint/js": "^9.21.0",
-    "@tailwindcss/typography": "^0.5.16",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.20",
