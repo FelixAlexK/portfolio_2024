@@ -22,7 +22,7 @@ function toggleExpand() {
 </script>
 
 <template>
-  <div class="hidden language-stats-container w-full rounded-3xl bg-gradient-to-r from-gray-100 to-gray-200 p-8 shadow-lg md:block">
+  <div class="hidden language-stats-container w-full rounded-3xl bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 p-8 shadow-lg md:block">
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-2 font-rubik text-lg font-medium text-gray-800">
         <Code class="text-blue-800" />

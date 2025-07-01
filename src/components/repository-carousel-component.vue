@@ -3,6 +3,7 @@ import { useAsyncState } from "@vueuse/core";
 import { ChevronLeft, ChevronRight } from "lucide-vue-next";
 import { ref } from "vue";
 
+// @ts-expect-error: Importing markdown file as Vue component is not typed
 import { frontmatter } from "../components/content/repo.md";
 import { getUserPublicRepos } from "../services/api";
 import ButtonComponent from "./gradient-button-component.vue";
@@ -37,7 +38,7 @@ function scrollLeftOrRight(direction: "left" | "right") {
 </script>
 
 <template>
-  <div class="hidden h-96 w-full flex-col items-center rounded-3xl bg-gradient-to-r from-gray-100 to-gray-200 p-8 shadow-lg md:flex">
+  <div class="hidden h-96 w-full flex-col items-center rounded-3xl bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 p-8 shadow-lg md:flex">
     <span class="mb-4 flex w-full justify-start font-rubik text-sm text-blue-800 uppercase tracking-wide">
       {{ frontmatter.sectionTitle }}
     </span>
