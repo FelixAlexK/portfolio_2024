@@ -48,7 +48,7 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
     </header>
     <main>
       <div class="h-full p-8 md:container md:mx-auto">
-        <MyPassionComponent ref="homeTarget" class="mb-32 mt-16 md:mb-64 md:mt-32" />
+        <MyPassionComponent ref="homeTarget" class="mb-32   md:mb-64 mt-12  " />
         <RepoScroller class="mb-8 md:mb-16" />
         <LanguageStatsComponent class="mb-32 md:mb-64" />
         <div id="about" class="invisible relative -top-32 block" />
@@ -98,3 +98,13 @@ setupIntersectionObserver(contactTarget, contactTargetIsVisible);
     </footer>
   </div>
 </template>
+
+<style scoped>
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px);
+
+  z-index: -100;
+}
+</style>
