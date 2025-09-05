@@ -8,7 +8,7 @@ const openToWork = ref(false);
   <section id="home" class="">
     <div class="pb-40 pt-20 flex  items-center gap-40 max-lg:flex-col max-md:text-center">
       <div class="relative w-160 h-160 min-w-160 min-h-160 rounded-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r dark:from-primary dark:to-secondary rounded-full p-4">
+        <div class="absolute inset-0 bg-radial-[at_50%_0%] dark:from-highlight  dark:to-border to-75% rounded-full p-4">
           <div class="w-full h-full rounded-full">
             <img class="w-full h-full object-cover rounded-full border-2" src="../assets/IMG_1877.webp" alt="Profile Picture">
           </div>
