@@ -3,7 +3,7 @@ import { Github, Globe } from "lucide-vue-next";
 </script>
 
 <template>
-  <section class="mt-100">
+  <section id="projects" class="mt-100">
     <h2 class="font-bold text-lg tracking-widest font-rubik uppercase mb-40">
       Projects
     </h2>
