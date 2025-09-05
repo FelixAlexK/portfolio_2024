@@ -20,7 +20,7 @@ import WorkExperienceComponent from "./components/work-experience-component.vue"
       <ProjectsComponent />
     </main>
 
-    <footer class="w-full flex items-center pt-20 border-t dark:border-border-muted pb-4 mt-60 max-w-3xl mx-auto">
+    <footer id="contact" class="w-full flex items-center pt-20 border-t dark:border-border-muted pb-4 mt-60 max-w-3xl mx-auto">
       <div class="flex items-center gap-8 dark:text-text-muted dark:hover:text-text">
         <Mail class="size-20 " />
         <a href="mailto:felix.kuhbier@gmx.de">felix.kuhbier@gmx.de</a>
