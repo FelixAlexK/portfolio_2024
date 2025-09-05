@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { Github, Globe } from "lucide-vue-next";
+
+import ProjectCardComponent from "./project-card-component.vue";
+import ProjectTechStackComponent from "./project-tech-stack-component.vue";
 </script>
 
 <template>
@@ -7,65 +10,27 @@ import { Github, Globe } from "lucide-vue-next";
     <h2 class="font-bold text-lg tracking-widest font-rubik uppercase mb-40">
       Projects
     </h2>
-    <div class="flex flex-col w-full">
-      <div class="flex items-start gap-16">
-        <div class="rounded-lg w-full border dark:border-dark-border border-light-border  shadow dark:border-t-dark-highlight border-t-light-border-muted bg-gradient-to-b dark:from-dark-bg from-light-bg dark:to-dark-bg-dark to-light-bg-dark p-20 flex flex-col gap-16">
-          <a href="">
-            <img class="rounded-lg object-cover w-full" src="https://dummyimage.com/600x400/ffffff/0000" alt="">
-          </a>
-          <div class="flex flex-col">
-            <h3 class="font-semibold text-lg tracking-widest font-rubik uppercase mb-20">
-              abc
-            </h3>
-            <p class="dark:text-dark-text-muted text-light-text-muted">
-              <span class="dark:text-dark-text text-light-text uppercase">Lorem</span>
-              ipsum dolor sit amet consectetur adipisicing elit. Doloribus nihil nulla non ut, nostrum inventore, corporis vel enim maxime molestias ipsa perspiciatis sit nobis quasi corrupti veritatis. Architecto, maxime maiores.s
-            </p>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-center gap-8 mt-28 w-full">
-              <div class="flex items-center justify-center gap-12 w-full px-16 h-28 rounded-full bg-[#3178c6]/20 ">
-                <i class="devicon-typescript-plain colored" title="TypeScript"></i>
-                <p class="text-xs whitespace-nowrap">
-                  TypeScript
-                </p>
-              </div>
-              <div class="flex items-center justify-center gap-12 w-full px-16 h-28 rounded-full bg-[#3178c6]/20 ">
-                <i class="devicon-typescript-plain colored" title="TypeScript"></i>
-                <p class="text-xs whitespace-nowrap">
-                  TypeScript
-                </p>
-              </div>
-              <div class="flex items-center justify-center gap-12 w-full px-16 h-28 rounded-full bg-[#3178c6]/20 ">
-                <i class="devicon-typescript-plain colored" title="TypeScript"></i>
-                <p class="text-xs whitespace-nowrap">
-                  TypeScript
-                </p>
-              </div>
-              <div class="flex items-center justify-center gap-12 w-full px-16 h-28 rounded-full bg-[#3178c6]/20 ">
-                <i class="devicon-typescript-plain colored" title="TypeScript"></i>
-                <p class="text-xs whitespace-nowrap">
-                  TypeScript
-                </p>
-              </div>
-              <div class="flex items-center justify-center gap-12 w-full px-16 h-28 rounded-full bg-[#3178c6]/20 ">
-                <i class="devicon-typescript-plain colored" title="TypeScript"></i>
-                <p class="text-xs whitespace-nowrap">
-                  TypeScript
-                </p>
-              </div>
-            </div>
-            <div class="flex items-center gap-8 w-full mt-28 max-md:flex-col">
-              <a href="" class="w-full dark:bg-dark-bg-light bg-light-bg-light uppercase text-xs transition-all rounded-full font-bold dark:text-dark-text dark:hover:text-dark-text-muted hover:text-light-text-muted text-light-text flex items-center justify-center px-8 py-12 gap-8 ">
-                <Globe class="size-20" />
-                Live Demo
-              </a>
-              <a href="" class="w-full dark:bg-dark-bg-light bg-light-bg-light uppercase text-xs transition-all rounded-full font-bold dark:text-dark-text dark:hover:text-dark-text-muted flex items-center justify-center px-8 py-12 gap-8 ">
-                <Github class="size-20" />
-                Source Code
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ProjectCardComponent title="Mood Tracker" description="Mood Tracker is a web application that helps users log, track, and analyze their moods over time. It provides insights into emotional patterns and trends to promote self-awareness and mental well-being.">
+      <template #img>
+        <img class="rounded-lg object-cover w-full" src="../assets//Screenshot 2025-09-05 142822.png" alt="">
+      </template>
+      <template #tech-stack>
+        <ProjectTechStackComponent tech-name="TypeScript" bg-color="#3178C6"></ProjectTechStackComponent>
+        <ProjectTechStackComponent tech-name="Vue" simple-icon-name="vuedotjs" bg-color="#4FC08D"></ProjectTechStackComponent>
+        <ProjectTechStackComponent tech-name="TailwindCSS" bg-color="#06B6D4"></ProjectTechStackComponent>
+        <ProjectTechStackComponent tech-name="TanStack Query" bg-color="#fb2c36">
+          <template #icon>
+            <img class="size-16" src="https://tanstack.com/images/logos/logo-color-600.png" alt="">
+          </template>
+        </ProjectTechStackComponent>
+        <ProjectTechStackComponent tech-name="Hono" bg-color="#E36002">
+        </ProjectTechStackComponent>
+        <ProjectTechStackComponent tech-name="Drizzle ORM" simple-icon-name="drizzle" bg-color="#C5F74F">
+        </ProjectTechStackComponent>
+        <ProjectTechStackComponent tech-name="PostgreSQL" bg-color="#4169E1"></ProjectTechStackComponent>
+        <ProjectTechStackComponent tech-name="Bun" simple-icon-name="bun" bg-color="#fbf0df"></ProjectTechStackComponent>
+      </template>
+    </ProjectCardComponent>
   </section>
 </template>
+#182e4b
