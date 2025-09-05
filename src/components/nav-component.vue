@@ -13,13 +13,13 @@ function toggleMenu() {
 <template>
   <nav class="pt-20 pb-40 w-full">
     <div class="flex items-center justify-between">
-      <h3 class="text-2xl font-bold font-rubik">
+      <a href="/" class="text-lg dark:hover:text-text uppercase dark:text-text-muted tracking-widest font-bold font-rubik">
         Felix
-      </h3>
-      <div class="space-x-40 text-base font-lato hidden md:block">
-        <a class="hover:text-text-muted" href="#work-experience">Work Experience</a>
-        <a class="hover:text-text-muted" href="#projects">Projects</a>
-        <a class="hover:text-text-muted" href="#contact">Contact</a>
+      </a>
+      <div class="space-x-40 text-lg font-lato  hidden md:block dark:text-text-muted">
+        <a class="dark:hover:text-text" href="#work-experience">Work Experience</a>
+        <a class="dark:hover:text-text" href="#projects">Projects</a>
+        <a class="dark:hover:text-text" href="#contact">Contact</a>
       </div>
       <Menu class="size-28 md:hidden" @click="toggleMenu" />
     </div>
