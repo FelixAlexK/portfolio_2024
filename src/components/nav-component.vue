@@ -17,10 +17,9 @@ function toggleMenu() {
         Felix
       </h3>
       <div class="space-x-40 text-base font-lato hidden md:block">
-        <a class="hover:text-text-muted" href="">Home</a>
-        <a class="hover:text-text-muted" href="">About</a>
-        <a class="hover:text-text-muted" href="">Projects</a>
-        <a class="hover:text-text-muted" href="">Contact</a>
+        <a class="hover:text-text-muted" href="#work-experience">Work Experience</a>
+        <a class="hover:text-text-muted" href="#projects">Projects</a>
+        <a class="hover:text-text-muted" href="#contact">Contact</a>
       </div>
       <Menu class="size-28 md:hidden" @click="toggleMenu" />
     </div>
@@ -32,12 +31,17 @@ function toggleMenu() {
           <div class="justify-end w-full flex">
             <X class="size-28 mb-20" @click="toggleMenu" />
           </div>
-          <div class="flex flex-col items-center space-y-60 text-2xl font-lato mt-40">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Projects</a>
-            <a href="">Contact</a>
-          </div>
+          <ul class="flex flex-col items-center space-y-60 text-3xl font-semibold text-center font-lato mt-40">
+            <li>
+              <a class="hover:text-text-muted" href="#work-experience" @click="menuIsOpen = false">Work Experience</a>
+            </li>
+            <li>
+              <a class="hover:text-text-muted" href="#projects" @click="menuIsOpen = false">Projects</a>
+            </li>
+            <li>
+              <a class="hover:text-text-muted" href="#contact" @click="menuIsOpen = false">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
     </Transition>
