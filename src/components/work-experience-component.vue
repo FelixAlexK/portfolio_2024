@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="mt-100">
+  <section id="work-experience" class="mt-100">
     <h2 class="font-bold text-lg tracking-widest font-rubik uppercase mb-40">
       Work Experience
     </h2>
