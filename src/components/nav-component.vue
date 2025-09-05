@@ -13,21 +13,21 @@ function toggleMenu() {
 <template>
   <nav class="pt-20 pb-40 w-full">
     <div class="flex items-center justify-between">
-      <a href="/" class="text-lg dark:hover:text-text uppercase dark:text-text-muted tracking-widest font-bold font-rubik">
+      <a href="/" class="text-lg dark:hover:text-dark-text hover:text-light-text  uppercase dark:text-dark-text-muted text-light-text-muted tracking-widest font-bold font-rubik">
         Felix
       </a>
-      <div class="space-x-40 text-lg font-lato  hidden md:block dark:text-text-muted">
-        <a class="dark:hover:text-text" href="#work-experience">Work Experience</a>
-        <a class="dark:hover:text-text" href="#projects">Projects</a>
-        <a class="dark:hover:text-text" href="#contact">Contact</a>
+      <div class="space-x-40 text-lg font-lato  hidden md:block dark:text-dark-text-muted text-light-text-muted">
+        <a class="dark:hover:text-dark-text hover:text-light-text" href="#work-experience">Work Experience</a>
+        <a class="dark:hover:text-dark-text hover:text-light-text" href="#projects">Projects</a>
+        <a class="dark:hover:text-dark-text hover:text-light-text" href="#contact">Contact</a>
       </div>
-      <Menu class="size-28 md:hidden" @click="toggleMenu" />
+      <Menu class="size-28 md:hidden dark:text-dark-text-muted text-light-text-muted" @click="toggleMenu" />
     </div>
   </nav>
   <Teleport to="body">
     <Transition name="modal">
-      <div v-if="menuIsOpen" class="fixed z-50 top-0 left-0 w-full h-full dark:bg-bg-dark/50 flex transition-opacity  dark:text-text">
-        <div class="w-full h-full m-auto p-40 bg-gradient-to-b dark:from-bg-light dark:to-bg transition-all ">
+      <div v-if="menuIsOpen" class="fixed z-50 top-0 left-0 w-full h-full dark:bg-dark-bg-dark bg-light-bg-dark flex transition-opacity  dark:text-dark-text text-light-text">
+        <div class="w-full h-full m-auto p-40 bg-gradient-to-b dark:from-bg-dark-light from-bg-light-light dark:to-dark-bg to-light-bg transition-all ">
           <div class="justify-end w-full flex">
             <X class="size-28 mb-20" @click="toggleMenu" />
           </div>
