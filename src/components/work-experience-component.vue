@@ -17,12 +17,16 @@
             Frontend Software Developer
           </p>
           <p class="dark:text-dark-text-muted text-light-text-muted font-lato mb-16">
-            Schmalz GmbH • working student
+            <a target="_blank" class="dark:hover:text-dark-text hover:text-light-text" href="https://www.schmalz.com/de-de">Schmalz GmbH </a>• working student
             <span class="dark:text-dark-text-muted text-light-text-muted whitespace-nowrap hidden max-sm:inline-block">• (2023 - 2025)</span>
           </p>
-          <p class="dark:text-dark-text-muted text-light-text-muted font-lato">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quis porro perspiciatis dolorem laudantium. Excepturi totam dignissimos quidem facilis pariatur odio omnis at deserunt, labore tempore dolores, esse quae est!
-          </p>
+          <ul class="dark:text-dark-text-muted text-light-text-muted font-lato list-disc space-y-8 ml-20">
+            <li>
+              Developed and enhanced modern web applications with a focus on frontend technologies (Vue.js, Astro, etc.).
+            </li>
+            <li>Contributed to backend development by implementing smaller server-side functionalities, gaining insights into full-stack development.</li>
+            <li>Collaborated with the team to improve user experience, performance, and code quality.</li>
+          </ul>
         </div>
       </div>
     </div>
