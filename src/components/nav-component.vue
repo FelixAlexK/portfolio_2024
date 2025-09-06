@@ -1,158 +1,49 @@
 <script setup lang="ts">
-import { useWindowScroll } from "@vueuse/core";
 import { Menu, X } from "lucide-vue-next";
-import { onUnmounted, ref } from "vue";
+import { ref } from "vue";
 
-const { homeTarget, aboutTarget, contactTarget } = defineProps<{
-  homeTarget: boolean;
-  aboutTarget: boolean;
-  contactTarget: boolean;
-}>();
-
-const isOpen = ref(false);
-
-const { y } = useWindowScroll();
+const menuIsOpen = ref(false);
 
 function toggleMenu() {
-  isOpen.value = !isOpen.value;
-  toggleScrollLock();
+  menuIsOpen.value = !menuIsOpen.value;
+  console.log(menuIsOpen.value);
 }
-
-// Function to close menu
-function closeMenu() {
-  isOpen.value = false;
-  toggleScrollLock();
-}
-
-function toggleScrollLock() {
-  if (isOpen.value) {
-    document.body.style.overflow = "hidden";
-  }
-  else {
-    document.body.style.overflow = "";
-  }
-}
-
-onUnmounted(() => {
-  document.body.style.overflow = ""; // Ensure scrolling is restored
-});
 </script>
 
 <template>
-  <div
-    :class="{
-      'bg-white text-gray-950 shadow-md': y <= 0,
-      'bg-gray-950 text-white shadow-lg': y > 5,
-    }"
-    class="fixed top-0 z-50 flex h-20 w-full items-center justify-between border-b-2 border-blue-800 px-8 transition-all duration-300 md:px-16"
-  >
-    <!-- Logo -->
-    <a href="#">
-      <img
-        v-if="y <= 0"
-        class="aspect-auto h-auto w-24 transition-transform duration-300 hover:scale-105"
-        src="../assets/logo.png"
-        alt="logo"
-      >
-      <img
-        v-else-if="y > 5"
-        class="aspect-auto h-auto w-24 transition-transform duration-300 hover:scale-105"
-        src="../assets/logo_light.png"
-        alt="logo"
-      >
-    </a>
-
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex">
-      <ul class="flex items-center gap-8 font-rubik text-lg font-medium">
-        <li>
-          <a
-            :class="{ 'text-blue-800': homeTarget }"
-            class="px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-blue-800 hover:text-white"
-            href="#"
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            :class="{ 'text-blue-800': aboutTarget }"
-            class="px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-blue-800 hover:text-white"
-            href="#about"
-          >
-            Ich
-          </a>
-        </li>
-        <li>
-          <a
-            :class="{ 'text-blue-800': contactTarget }"
-            class="px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-blue-800 hover:text-white"
-            href="#contact"
-          >
-            Kontakt
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Mobile Navigation -->
-    <div class="relative z-50 md:hidden">
-      <!-- Burger Icon -->
-      <button
-        class="flex h-10 w-10 items-center justify-center rounded-md focus:outline-none"
-        aria-label="Toggle Menu"
-        @click="toggleMenu"
-      >
-        <Menu :class="{ 'text-gray-950': y <= 0, 'text-white': y > 5 }" />
-      </button>
-
-      <!-- Mobile Menu Items -->
-      <transition name="fade-slide">
-        <div
-          v-if="isOpen"
-          class="fixed left-0 top-0 z-40 flex h-screen w-screen flex-col items-start justify-center bg-gray-950 p-8 text-white"
-        >
-          <!-- Close Button -->
-          <button
-            class="absolute right-4 top-4 rounded-md text-2xl focus:outline-none"
-            aria-label="Toggle Menu"
-            @click="closeMenu"
-          >
-            <X class="h-10 w-10" />
-          </button>
-
-          <!-- Menu Items -->
-          <ul class="mt-16 flex flex-col gap-8 font-rubik text-2xl">
+  <nav class="pt-20 pb-40 w-full">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-lg dark:hover:text-dark-text hover:text-light-text  uppercase dark:text-dark-text-muted text-light-text-muted tracking-widest font-bold font-rubik">
+        Felix
+      </a>
+      <div class="space-x-40 text-lg font-lato  hidden md:block dark:text-dark-text-muted text-light-text-muted">
+        <a class="dark:hover:text-dark-text hover:text-light-text" href="#work-experience">Work Experience</a>
+        <a class="dark:hover:text-dark-text hover:text-light-text" href="#projects">Projects</a>
+        <a class="dark:hover:text-dark-text hover:text-light-text" href="#contact">Contact</a>
+      </div>
+      <Menu class="size-28 md:hidden dark:text-dark-text-muted text-light-text-muted" @click="toggleMenu" />
+    </div>
+  </nav>
+  <Teleport to="body">
+    <Transition name="modal">
+      <div v-if="menuIsOpen" class="fixed z-50 top-0 left-0 w-full h-full dark:bg-dark-bg-dark bg-light-bg-dark flex transition-opacity  dark:text-dark-text text-light-text">
+        <div class="w-full h-full m-auto p-40 bg-gradient-to-b dark:from-bg-dark-light from-bg-light-light dark:to-dark-bg to-light-bg transition-all ">
+          <div class="justify-end w-full flex">
+            <X class="size-28 mb-20" @click="toggleMenu" />
+          </div>
+          <ul class="flex flex-col items-center space-y-60 text-3xl font-semibold text-center font-lato mt-40">
             <li>
-              <a
-                class="p-6 rounded-lg transition-colors duration-300 hover:bg-blue-800 hover:text-white"
-                href="#"
-                @click="closeMenu"
-              >
-                Home
-              </a>
+              <a class="hover:text-text-muted" href="#work-experience" @click="menuIsOpen = false">Work Experience</a>
             </li>
             <li>
-              <a
-                class="p-6 rounded-lg transition-colors duration-300 hover:bg-blue-800 hover:text-white"
-                href="#about"
-                @click="closeMenu"
-              >
-                Ich
-              </a>
+              <a class="hover:text-text-muted" href="#projects" @click="menuIsOpen = false">Projects</a>
             </li>
             <li>
-              <a
-                class="p-6 rounded-lg transition-colors duration-300 hover:bg-blue-800 hover:text-white"
-                href="#contact"
-                @click="closeMenu"
-              >
-                Kontakt
-              </a>
+              <a class="hover:text-text-muted" href="#contact" @click="menuIsOpen = false">Contact</a>
             </li>
           </ul>
         </div>
-      </transition>
-    </div>
-  </div>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
