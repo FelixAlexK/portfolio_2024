@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Github, Globe } from "lucide-vue-next";
-
 import ProjectCardComponent from "./project-card-component.vue";
 import ProjectTechStackComponent from "./project-tech-stack-component.vue";
 </script>

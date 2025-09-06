@@ -11,7 +11,6 @@ export default defineConfig({
     Markdown(),
     tailwindcss(),
 
-
   ],
   assetsInclude: ["**/*.JPEG", "**/*.jpeg", "**/*.jpg"],
 });
