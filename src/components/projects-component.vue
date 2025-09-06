@@ -10,7 +10,7 @@ import ProjectTechStackComponent from "./project-tech-stack-component.vue";
     <h2 class="font-bold text-lg tracking-widest font-rubik uppercase mb-40">
       Projects
     </h2>
-    <ProjectCardComponent title="Mood Tracker" description="Mood Tracker is a web application that helps users log, track, and analyze their moods over time. It provides insights into emotional patterns and trends to promote self-awareness and mental well-being.">
+    <ProjectCardComponent source-code-href="https://github.com/FelixAlexK/mood_tracker" live-demo-href="https://mood-tracker.fly.dev/" title="Mood Tracker" description="Mood Tracker is a web application that helps users log, track, and analyze their moods over time. It provides insights into emotional patterns and trends to promote self-awareness and mental well-being.">
       <template #img>
         <img class="rounded-lg object-cover w-full" src="../assets//Screenshot 2025-09-05 142822.png" alt="">
       </template>
