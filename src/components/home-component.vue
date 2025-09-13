@@ -10,7 +10,7 @@ const openToWork = ref(false);
       <div class="relative w-160 h-160 min-w-160 min-h-160 rounded-full overflow-hidden">
         <div class="absolute inset-0 bg-radial-[at_50%_0%] from-light-border-muted to-light-border dark:from-dark-highlight  dark:to-dark-border to-75% rounded-full p-4">
           <div class="w-full h-full rounded-full">
-            <img class="w-full h-full object-cover rounded-full border-2" src="../assets/IMG_3208.webp" alt="Profile Picture">
+            <img fetchpriority="high" class="w-full h-full object-cover rounded-full border-2" src="../assets/IMG_3208.webp" alt="Profile Picture">
           </div>
         </div>
       </div>
