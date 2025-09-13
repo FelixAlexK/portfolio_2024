@@ -10,7 +10,7 @@ import ProjectTechStackComponent from "./project-tech-stack-component.vue";
     </h2>
     <ProjectCardComponent source-code-href="https://github.com/FelixAlexK/mood_tracker" live-demo-href="https://mood-tracker.fly.dev/" title="Mood Tracker" description="Mood Tracker is a web application that helps users log, track, and analyze their moods over time. It provides insights into emotional patterns and trends to promote self-awareness and mental well-being.">
       <template #img>
-        <img class="rounded-lg object-cover w-full" src="../assets//Screenshot 2025-09-05 142822.png" alt="">
+        <img fetchpriority="low" class="rounded-lg object-cover w-full" src="../assets//Screenshot 2025-09-05 142822.png" alt="">
       </template>
       <template #tech-stack>
         <ProjectTechStackComponent tech-name="TypeScript" bg-color="#3178C6"></ProjectTechStackComponent>
@@ -18,7 +18,7 @@ import ProjectTechStackComponent from "./project-tech-stack-component.vue";
         <ProjectTechStackComponent tech-name="TailwindCSS" bg-color="#06B6D4"></ProjectTechStackComponent>
         <ProjectTechStackComponent tech-name="TanStack Query" bg-color="#fb2c36">
           <template #icon>
-            <img class="size-16" src="https://tanstack.com/images/logos/logo-color-600.png" alt="">
+            <img fetchpriority="auto" class="size-16" src="https://tanstack.com/images/logos/logo-color-600.png" alt="">
           </template>
         </ProjectTechStackComponent>
         <ProjectTechStackComponent tech-name="Hono" bg-color="#E36002">
