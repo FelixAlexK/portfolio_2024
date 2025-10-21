@@ -13,9 +13,9 @@
           2023 - 2025
         </p>
         <div class="flex flex-col">
-          <p class="dark:text-dark-text text-light-text text-lg font-semibold font-lato">
+          <h3 class="dark:text-dark-text text-light-text text-lg font-semibold font-lato">
             Frontend Software Developer
-          </p>
+          </h3>
           <p class="dark:text-dark-text-muted text-light-text-muted font-lato mb-16">
             <a target="_blank" class="dark:hover:text-dark-text hover:text-light-text" href="https://www.schmalz.com/de-de">Schmalz GmbH </a>• working student
             <span class="dark:text-dark-text-muted text-light-text-muted whitespace-nowrap hidden max-sm:inline-block">• (2023 - 2025)</span>

@@ -22,7 +22,7 @@ import WorkExperienceComponent from "./components/work-experience-component.vue"
 
     <footer id="contact" class="w-full flex items-center pt-20 border-t border-light-border-muted dark:border-dark-border-muted pb-4 mt-60 max-w-3xl mx-auto">
       <div class="flex items-center gap-8 text-light-text-muted dark:text-dark-text-muted dark:hover:text-dark-text hover:text-light-text">
-        <Mail class="size-20 " />
+        <Mail aria-label="mail-icon" class="size-20 " />
         <a href="mailto:felix.kuhbier@gmx.de">felix.kuhbier@gmx.de</a>
       </div>
     </footer>

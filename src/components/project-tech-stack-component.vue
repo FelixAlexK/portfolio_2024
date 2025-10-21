@@ -13,7 +13,7 @@ const { techName, bgColor, simpleIconName } = defineProps<{
   >
     <slot v-if="$slots.icon" name="icon">
     </slot>
-    <img v-else class="size-16" :src="`https://cdn.simpleicons.org/${simpleIconName ? simpleIconName : techName.toLowerCase()}`" />
+    <img v-else :aria-label="techName" :alt="`${techName}-icon`" class="size-16" :src="`https://cdn.simpleicons.org/${simpleIconName ? simpleIconName : techName.toLowerCase()}`" />
     <p class="text-xs whitespace-nowrap">
       {{ techName }}
     </p>

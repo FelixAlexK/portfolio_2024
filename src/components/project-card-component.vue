@@ -39,11 +39,11 @@ const highlightDescription = computed(() => {
           </div>
           <div class="flex items-center gap-8 w-full mt-28 max-md:flex-col">
             <a :href="liveDemoHref" class="w-full dark:bg-dark-bg-light bg-light-bg-light uppercase text-xs transition-all rounded-full font-bold dark:text-dark-text dark:hover:text-dark-text-muted hover:text-light-text-muted text-light-text flex items-center justify-center px-8 py-12 gap-8 ">
-              <Globe class="size-20" />
+              <Globe aria-label="live-demo-icon" class="size-20" />
               Live Demo
             </a>
             <a :href="sourceCodeHref" class="w-full dark:bg-dark-bg-light bg-light-bg-light uppercase text-xs transition-all rounded-full font-bold dark:text-dark-text dark:hover:text-dark-text-muted flex items-center justify-center px-8 py-12 gap-8 ">
-              <Github class="size-20" />
+              <Github aria-label="source-code-icon" class="size-20" />
               Source Code
             </a>
           </div>
