@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section id="tech-stack" class="mt-100">
+  <section id="tech-stack">
     <h2 class="font-bold text-lg tracking-widest font-rubik uppercase mb-40">
       Tech Stack
     </h2>

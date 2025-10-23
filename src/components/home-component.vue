@@ -5,8 +5,8 @@ const openToWork = ref(false);
 </script>
 
 <template>
-  <section id="home" class="">
-    <div class="pb-40 pt-20 flex  items-center gap-40 max-lg:flex-col max-md:text-center">
+  <section id="home" class="sm:mt-100">
+    <div class="flex  items-center gap-40 max-lg:flex-col max-md:text-center">
       <div class="relative w-160 h-160 min-w-160 min-h-160 rounded-full overflow-hidden">
         <div class="absolute inset-0 bg-radial-[at_50%_0%] from-light-border-muted to-light-border dark:from-dark-highlight  dark:to-dark-border to-75% rounded-full p-4">
           <div class="w-full h-full rounded-full">

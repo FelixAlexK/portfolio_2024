@@ -7,7 +7,7 @@ const techStacksBuyWise = ["TypeScript", "TailwindCSS", "TanStack Query", "Hono"
 </script>
 
 <template>
-  <section id="projects" class="mt-100">
+  <section id="projects">
     <h2 class="font-bold text-lg tracking-widest font-rubik uppercase mb-40">
       Projects
     </h2>
