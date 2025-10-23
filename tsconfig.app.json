@@ -10,5 +10,9 @@
     "noUnusedParameters": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.md"]
+  "include": [
+    "src/**/*.ts",
+    "./**/*.d.ts",
+    "src/**/*.vue"
+  ]
 }
