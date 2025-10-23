@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "bunx --bun vite",
-    "build": "vue-tsc -b && bunx --bun vite build",
-    "preview": "bunx --bun vite vite preview",
+    "build": "vue-tsc -b && vite build",
+    "preview": "bunx --bun vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
