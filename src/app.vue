@@ -13,7 +13,7 @@ import WorkExperienceComponent from "./components/work-experience-component.vue"
     <header class="max-w-3xl mx-auto">
       <NavComponent />
     </header>
-    <main class="w-full h-full max-w-3xl mx-auto min-h-screen flex flex-col   pb-20">
+    <main class="w-full h-full max-w-3xl mx-auto min-h-screen flex flex-col pb-20 space-y-100">
       <HomeComponent />
       <TechStackComponent />
       <WorkExperienceComponent />
