@@ -37,7 +37,7 @@ const highlightDescription = computed(() => {
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-center gap-8 mt-28 w-full">
             <slot name="tech-stack"></slot>
           </div>
-          <div  class="flex items-center gap-8 w-full mt-28 max-md:flex-col">
+          <div class="flex items-center gap-8 w-full mt-28 max-md:flex-col">
             <a v-if="liveDemoHref" :href="liveDemoHref" class="w-full dark:bg-dark-bg-light bg-light-bg-light uppercase text-xs transition-all rounded-full font-bold dark:text-dark-text dark:hover:text-dark-text-muted hover:text-light-text-muted text-light-text flex items-center justify-center px-8 py-12 gap-8 ">
               <Globe aria-label="live-demo-icon" class="size-20" />
               Live Demo

@@ -3,8 +3,8 @@ import { Mail } from "lucide-vue-next";
 
 import HomeComponent from "./components/home-component.vue";
 import NavComponent from "./components/nav-component.vue";
-import ProjectsComponent from "./components/projects-component.vue";
 import TechStackComponent from "./components/personal-tech-stack-component.vue";
+import ProjectsComponent from "./components/projects-component.vue";
 import WorkExperienceComponent from "./components/work-experience-component.vue";
 </script>
 

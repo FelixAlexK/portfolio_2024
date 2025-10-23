@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const { techName } = defineProps<{
   techName: string;
@@ -29,17 +29,16 @@ const techStacks: Tech[] = [
 ];
 
 const techStackMap = new Map(
-  techStacks.map(item => [item.techName.toLowerCase(), item])
+  techStacks.map(item => [item.techName.toLowerCase(), item]),
 );
 
-const lookupKey = techName ? techName.toLowerCase() : '';
+const lookupKey = techName ? techName.toLowerCase() : "";
 const techStackItem = ref<Tech>(
   techStackMap.get(lookupKey) ?? {
-    techName: techName,
-    bgColor: "#CCCCCC"
-  }
+    techName,
+    bgColor: "#CCCCCC",
+  },
 );
-
 </script>
 
 <template>
