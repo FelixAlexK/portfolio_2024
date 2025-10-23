@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import ProjectCardComponent from "./project-card-component.vue";
 import ProjectTechStackComponent from "./project-tech-stack-component.vue";
+
+
+const techStacksMoodTracker = ["TypeScript", "vue", "TailwindCSS", "TanStack Query", "Hono", "Drizzle ORM", "PostgreSQL", "Bun", "Vite"];
+const techStacksBuyWise = ["TypeScript", "TailwindCSS", "TanStack Query", "Hono", "Drizzle ORM", "Turso", "Bun", "Vite", "React", "BetterAuth", "Turborepo"];
+
+
 </script>
 
 <template>
@@ -8,27 +14,26 @@ import ProjectTechStackComponent from "./project-tech-stack-component.vue";
     <h2 class="font-bold text-lg tracking-widest font-rubik uppercase mb-40">
       Projects
     </h2>
-    <ProjectCardComponent source-code-href="https://github.com/FelixAlexK/mood_tracker" live-demo-href="https://mood-tracker.fly.dev/" title="Mood Tracker" description="Mood Tracker is a web application that helps users log, track, and analyze their moods over time. It provides insights into emotional patterns and trends to promote self-awareness and mental well-being.">
+    <div class="flex flex-col space-y-20">
+      <ProjectCardComponent source-code-href="https://github.com/FelixAlexK/mood_tracker" live-demo-href="https://mood-tracker.fly.dev/" title="Mood Tracker" description="Mood Tracker is a web application that helps users log, track, and analyze their moods over time. It provides insights into emotional patterns and trends to promote self-awareness and mental well-being.">
       <template #img>
-        <img aria-label="Mood Tracker Screenshot" fetchpriority="low" class="rounded-lg object-cover w-full" src="../assets//Screenshot 2025-09-05 142822.png" alt="Mood Tracker Screenshot">
+        <img aria-label="Mood Tracker Screenshot" fetchpriority="low" class="rounded-lg object-cover w-full" src="../assets/Screenshot 2025-09-05 142822.png" alt="Mood Tracker Screenshot">
       </template>
       <template #tech-stack>
-        <ProjectTechStackComponent tech-name="TypeScript" bg-color="#3178C6"></ProjectTechStackComponent>
-        <ProjectTechStackComponent tech-name="Vue" simple-icon-name="vuedotjs" bg-color="#4FC08D"></ProjectTechStackComponent>
-        <ProjectTechStackComponent tech-name="TailwindCSS" bg-color="#06B6D4"></ProjectTechStackComponent>
-        <ProjectTechStackComponent tech-name="TanStack Query" bg-color="#fb2c36">
-          <template #icon>
-            <img fetchpriority="auto" class="size-16" src="https://tanstack.com/images/logos/logo-color-600.png" alt="">
-          </template>
-        </ProjectTechStackComponent>
-        <ProjectTechStackComponent tech-name="Hono" bg-color="#E36002">
-        </ProjectTechStackComponent>
-        <ProjectTechStackComponent tech-name="Drizzle ORM" simple-icon-name="drizzle" bg-color="#C5F74F">
-        </ProjectTechStackComponent>
-        <ProjectTechStackComponent tech-name="PostgreSQL" bg-color="#4169E1"></ProjectTechStackComponent>
-        <ProjectTechStackComponent tech-name="Bun" simple-icon-name="bun" bg-color="#fbf0df"></ProjectTechStackComponent>
+        <ProjectTechStackComponent v-for="item in techStacksMoodTracker" :key="item" :tech-name="item"></ProjectTechStackComponent>
+        
       </template>
     </ProjectCardComponent>
+    <ProjectCardComponent source-code-href="https://github.com/FelixAlexK/buy-wise" title="BuyWise" description="BuyWise is a web application that helps users make informed purchase decisions by calculating how much time they need to work to afford an item. It promotes mindful spending by visualizing the time cost of purchases relative to your salary.">
+      <template #img>
+        <img aria-label="BuyWise Screenshot" fetchpriority="low" class="rounded-lg object-cover w-full" src="../assets/image.png" alt="BuyWise Screenshot">
+      </template>
+      <template #tech-stack>
+        <ProjectTechStackComponent v-for="item in techStacksBuyWise" :key="item" :tech-name="item"></ProjectTechStackComponent>
+        
+      </template>
+    </ProjectCardComponent>
+    </div>
+    
   </section>
 </template>
-#182e4b
