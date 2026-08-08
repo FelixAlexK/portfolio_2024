@@ -7,6 +7,20 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  scroll-behavior: smooth;
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
 @theme {
   --color-*: initial;
   --spacing-*: initial;
@@ -58,4 +72,77 @@
   --spacing-100: 6.25rem;
   --spacing-160: 10rem;
   --spacing-240: 15rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+::selection {
+  background-color: var(--color-light-primary);
+  color: var(--color-light-bg-light);
+}
+
+:where(.dark, .dark *)::selection {
+  background-color: var(--color-dark-primary);
+  color: var(--color-dark-bg-dark);
+}
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.125rem;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-light-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+:where(.dark, .dark *) .link-underline::after {
+  background-color: var(--color-dark-primary);
+}
+
+.lift {
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .link-underline::after,
+  .lift {
+    transition: none;
+  }
 }

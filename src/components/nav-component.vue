@@ -1,45 +1,76 @@
 <script setup lang="ts">
-import { Menu, X } from "lucide-vue-next";
-import { ref } from "vue";
+import { Menu, Moon, Sun, X } from "lucide-vue-next";
+import { onBeforeUnmount, ref, watch } from "vue";
 
 const menuIsOpen = ref(false);
+const isDark = ref(document.documentElement.classList.contains("dark"));
+
+watch(menuIsOpen, (open) => {
+  document.body.style.overflow = open ? "hidden" : "";
+});
+
+onBeforeUnmount(() => {
+  document.body.style.overflow = "";
+});
+
+const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Work Experience", href: "#work-experience" },
+  { label: "Contact", href: "#contact" },
+];
 
 function toggleMenu() {
   menuIsOpen.value = !menuIsOpen.value;
-  console.log(menuIsOpen.value);
+}
+
+function toggleTheme() {
+  isDark.value = !isDark.value;
+  document.documentElement.classList.toggle("dark", isDark.value);
+  localStorage.setItem("theme", isDark.value ? "dark" : "light");
 }
 </script>
 
 <template>
   <nav class="pt-20 pb-40 w-full">
     <div class="flex items-center justify-between">
-      <a href="/" class="text-lg dark:hover:text-dark-text hover:text-light-text  uppercase dark:text-dark-text-muted text-light-text-muted tracking-widest font-bold font-rubik">
+      <a href="#home" class="text-lg font-bold font-rubik uppercase tracking-widest dark:text-dark-text-muted text-light-text-muted transition-colors dark:hover:text-dark-text hover:text-light-text">
         Felix
       </a>
-      <div class="space-x-40 text-lg font-lato  hidden md:block dark:text-dark-text-muted text-light-text-muted">
-        <a class="dark:hover:text-dark-text hover:text-light-text" href="#work-experience">Work Experience</a>
-        <a class="dark:hover:text-dark-text hover:text-light-text" href="#projects">Projects</a>
-        <a class="dark:hover:text-dark-text hover:text-light-text" href="#contact">Contact</a>
+      <div class="hidden md:flex items-center gap-40 text-lg font-lato dark:text-dark-text-muted text-light-text-muted">
+        <a v-for="link in navLinks" :key="link.href" class="link-underline transition-colors dark:hover:text-dark-text hover:text-light-text" :href="link.href">
+          {{ link.label }}
+        </a>
+        <button aria-label="Toggle dark mode" class="transition-colors dark:hover:text-dark-text hover:text-light-text" @click="toggleTheme">
+          <Sun v-if="isDark" class="size-20" />
+          <Moon v-else class="size-20" />
+        </button>
       </div>
-      <Menu class="size-28 md:hidden dark:text-dark-text-muted text-light-text-muted" @click="toggleMenu" />
+      <div class="flex items-center gap-16 md:hidden">
+        <button aria-label="Toggle dark mode" class="p-8 -m-8 dark:text-dark-text-muted text-light-text-muted" @click="toggleTheme">
+          <Sun v-if="isDark" class="size-28" />
+          <Moon v-else class="size-28" />
+        </button>
+        <Menu class="size-28 dark:text-dark-text-muted text-light-text-muted" @click="toggleMenu" />
+      </div>
     </div>
   </nav>
   <Teleport to="body">
     <Transition name="modal">
-      <div v-if="menuIsOpen" class="fixed z-50 top-0 left-0 w-full h-full dark:bg-dark-bg-dark bg-light-bg-dark flex transition-opacity  dark:text-dark-text text-light-text">
-        <div class="w-full h-full m-auto p-40 bg-gradient-to-b dark:from-bg-dark-light from-bg-light-light dark:to-dark-bg to-light-bg transition-all ">
-          <div class="justify-end w-full flex">
-            <X class="size-28 mb-20" @click="toggleMenu" />
+      <div v-if="menuIsOpen" class="fixed z-50 top-0 left-0 w-full h-dvh flex dark:bg-dark-bg-dark bg-light-bg-dark dark:text-dark-text text-light-text">
+        <div class="w-full h-dvh m-auto p-40 bg-linear-to-b dark:from-dark-bg-light dark:to-dark-bg from-light-bg-light to-light-bg">
+          <div class="flex items-center justify-between w-full">
+            <a href="#home" class="text-lg font-bold font-rubik uppercase tracking-widest dark:text-dark-text-muted text-light-text-muted" @click="menuIsOpen = false">
+              Felix
+            </a>
+            <button aria-label="Close menu" class="flex items-start" @click="toggleMenu">
+              <X class="size-28 mb-20" />
+            </button>
           </div>
           <ul class="flex flex-col items-center space-y-60 text-3xl font-semibold text-center font-lato mt-40">
-            <li>
-              <a class="hover:text-text-muted" href="#work-experience" @click="menuIsOpen = false">Work Experience</a>
-            </li>
-            <li>
-              <a class="hover:text-text-muted" href="#projects" @click="menuIsOpen = false">Projects</a>
-            </li>
-            <li>
-              <a class="hover:text-text-muted" href="#contact" @click="menuIsOpen = false">Contact</a>
+            <li v-for="link in navLinks" :key="link.href">
+              <a class="link-underline transition-colors dark:hover:text-dark-text hover:text-light-text" :href="link.href" @click="menuIsOpen = false">
+                {{ link.label }}
+              </a>
             </li>
           </ul>
         </div>
