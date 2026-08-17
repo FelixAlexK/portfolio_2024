@@ -37,7 +37,7 @@ function toggleTheme() {
         Felix
       </a>
       <div class="hidden md:flex items-center gap-40 text-lg font-lato dark:text-dark-text-muted text-light-text-muted">
-        <a v-for="link in navLinks" :key="link.href" class="link-underline transition-colors dark:hover:text-dark-text hover:text-light-text" :href="link.href">
+        <a v-for="link in navLinks" :key="link.href" :data-s-event="`Nav: ${link.label}`" class="link-underline transition-colors dark:hover:text-dark-text hover:text-light-text" :href="link.href">
           {{ link.label }}
         </a>
         <button aria-label="Toggle dark mode" class="transition-colors dark:hover:text-dark-text hover:text-light-text" @click="toggleTheme">
@@ -68,7 +68,7 @@ function toggleTheme() {
           </div>
           <ul class="flex flex-col items-center space-y-60 text-3xl font-semibold text-center font-lato mt-40">
             <li v-for="link in navLinks" :key="link.href">
-              <a class="link-underline transition-colors dark:hover:text-dark-text hover:text-light-text" :href="link.href" @click="menuIsOpen = false">
+              <a :data-s-event="`Nav: ${link.label}`" class="link-underline transition-colors dark:hover:text-dark-text hover:text-light-text" :href="link.href" @click="menuIsOpen = false">
                 {{ link.label }}
               </a>
             </li>

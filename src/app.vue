@@ -25,7 +25,7 @@ import WorkExperienceComponent from "./components/work-experience-component.vue"
     <footer id="contact" v-reveal class="w-full flex items-center pt-20 border-t border-light-border-muted dark:border-dark-border-muted pb-4 mt-60 max-w-3xl mx-auto">
       <div class="flex flex-wrap items-center gap-8 text-light-text-muted dark:text-dark-text-muted dark:hover:text-dark-text hover:text-light-text">
         <Mail aria-label="mail-icon" class="size-20 " />
-        <a href="mailto:felix.kuhbier@gmx.de" class="link-underline">felix.kuhbier@gmx.de</a>
+        <a data-s-event="Email click" href="mailto:felix.kuhbier@gmx.de" class="link-underline">felix.kuhbier@gmx.de</a>
       </div>
     </footer>
   </div>
