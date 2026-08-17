@@ -1,7 +1,14 @@
+import { configure } from "onedollarstats";
 import { createApp } from "vue";
 
 import App from "./app.vue";
 import "./style.css";
+
+configure({
+  hostname: "iamfelixk.de",
+  hashRouting: true,
+  devmode: true,
+});
 
 const app = createApp(App);
 
