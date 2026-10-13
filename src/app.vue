@@ -4,6 +4,7 @@ import { Mail } from "lucide-vue-next";
 import AboutComponent from "./components/about-component.vue";
 import EducationComponent from "./components/education-component.vue";
 import HomeComponent from "./components/home-component.vue";
+import LearningComponent from "./components/learning-component.vue";
 import NavComponent from "./components/nav-component.vue";
 import TechStackComponent from "./components/personal-tech-stack-component.vue";
 import WorkExperienceComponent from "./components/work-experience-component.vue";
@@ -18,6 +19,7 @@ import WorkExperienceComponent from "./components/work-experience-component.vue"
       <HomeComponent />
       <AboutComponent />
       <TechStackComponent />
+      <LearningComponent />
       <WorkExperienceComponent />
       <EducationComponent />
     </main>

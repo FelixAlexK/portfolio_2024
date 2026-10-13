@@ -15,6 +15,7 @@ onBeforeUnmount(() => {
 
 const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Learning", href: "#learning" },
   { label: "Work Experience", href: "#work-experience" },
   { label: "Contact", href: "#contact" },
 ];
