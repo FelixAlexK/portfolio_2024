@@ -11,6 +11,7 @@
 **Spec:** `docs/superpowers/specs/2026-10-13-learning-section-design.md`
 
 **Critical conventions (from `agents.md`):**
+
 - Spacing scale is wiped — only `0, 2, 4, 8, 12, 16, 20, 28, 40, 60, 100, 160, 240` exist (`max-w-240` = 15rem; `p-4`/`text-xl` silently do nothing)
 - Double quotes, semicolons, 2-space indent; imports must stay sorted (perfectionist)
 - Kebab-case filenames; one component per section in `src/components/`
@@ -22,6 +23,7 @@
 ### Task 1: Create the Learning component
 
 **Files:**
+
 - Create: `src/components/learning-component.vue`
 
 - [ ] **Step 1: Write the component**
@@ -85,6 +87,7 @@ onBeforeUnmount(() => {
 ```
 
 Notes:
+
 - The `.lift` class + `hover:-translate-y-4` is the canonical card pattern (copied verbatim from `education-component.vue:10`).
 - `max-w-240` = 15rem, centered via `items-center` on the card flex column.
 - `data-s-event` follows the analytics convention used in `home-component.vue`.
@@ -106,6 +109,7 @@ git commit -m "feat: add learning section component with roadmap.sh card"
 ### Task 2: Mount the section and add the nav link
 
 **Files:**
+
 - Modify: `src/app.vue` (imports + template)
 - Modify: `src/components/nav-component.vue:16-20` (navLinks array)
 
@@ -123,7 +127,9 @@ Mount it in `<main>` between Tech Stack and Work Experience:
 
 ```vue
       <TechStackComponent />
+
       <LearningComponent />
+
       <WorkExperienceComponent />
 ```
 
@@ -177,6 +183,7 @@ Run: `pnpm run dev` (leave running, note the printed local URL, default `http://
 - [ ] **Step 3: Manual visual checklist**
 
 Open the local URL and verify:
+
 - [ ] "Learning" section appears between Tech Stack and Work Experience
 - [ ] The roadmap.sh card image renders inside a `.lift` card (~15rem wide, centered)
 - [ ] Toggling dark mode in the nav swaps the card image (dark ↔ light variant)

@@ -10,13 +10,13 @@ roadmap.sh share card, in a place that fits the site's existing structure.
 
 ## Decisions (confirmed with user)
 
-| Decision | Choice |
-|---|---|
-| Placement | New dedicated "Learning" section between Tech Stack and Work Experience |
-| Image source | Hotlink the roadmap.sh URL (always reflects latest progress, no maintenance) |
-| Theme handling | Switch card variant with the site's light/dark toggle |
-| Nav | Add a "Learning" link to the top navigation |
-| Section content | Heading + one-line intro + `.lift` card linking to the roadmap |
+| Decision        | Choice                                                                       |
+| --------------- | ---------------------------------------------------------------------------- |
+| Placement       | New dedicated "Learning" section between Tech Stack and Work Experience      |
+| Image source    | Hotlink the roadmap.sh URL (always reflects latest progress, no maintenance) |
+| Theme handling  | Switch card variant with the site's light/dark toggle                        |
+| Nav             | Add a "Learning" link to the top navigation                                  |
+| Section content | Heading + one-line intro + `.lift` card linking to the roadmap               |
 
 ## Card image URLs (verified 200, `image/svg+xml`, distinct palettes)
 
