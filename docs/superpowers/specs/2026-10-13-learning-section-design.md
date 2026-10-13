@@ -44,8 +44,11 @@ nav link array.
 - Inside the card: centered `<img>` of the card SVG:
   - `:src` computed from theme state (dark vs light variant URL)
   - `loading="lazy"`, descriptive `alt`
-  - `rounded-lg w-full max-w-240 h-auto mx-auto` (15rem per the site's theme
-    spacing scale; adjust only if visual check shows it too small/large)
+  - `width="300" height="392"` (matches the SVG's intrinsic size; reserves the
+    aspect box so the lazy third-party load doesn't shift layout)
+  - `rounded-lg w-full max-w-240 h-auto` (15rem per the site's theme
+    spacing scale; centered by the card's `items-center`; adjust only if
+    visual check shows it too small/large)
 
 ### 2. Theme switching (isolated, no nav refactor)
 

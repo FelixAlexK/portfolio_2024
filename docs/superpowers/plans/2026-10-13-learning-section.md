@@ -77,6 +77,8 @@ onBeforeUnmount(() => {
         <img
           :src="cardUrl"
           alt="Felix's machine learning roadmap progress on roadmap.sh"
+          width="300"
+          height="392"
           loading="lazy"
           class="rounded-lg w-full max-w-240 h-auto"
         />
