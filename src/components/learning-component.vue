@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 
-const CARD_URL = "https://roadmap.sh/card/tall/65bb887a0c5481228374d7ee";
+const CARD_URL = "https://roadmap.sh/card/wide/65bb887a0c5481228374d7ee";
 
 const isDark = ref(document.documentElement.classList.contains("dark"));
 
@@ -44,10 +44,10 @@ onBeforeUnmount(() => {
         <img
           :src="cardUrl"
           alt="Felix's machine learning roadmap progress on roadmap.sh"
-          width="300"
-          height="392"
+          width="500"
+          height="190"
           loading="lazy"
-          class="rounded-lg w-full max-w-240 h-auto"
+          class="rounded-lg w-full h-auto"
         />
       </a>
     </div>
